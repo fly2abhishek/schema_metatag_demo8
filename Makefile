@@ -58,13 +58,6 @@ createdb:
 
 createsite:
 	cd ${TUGBOAT_ROOT}/web
-	drush site-install standard \
-	 --account-mail=admin@example.com \
-	 --account-name=admin \
-	 --account-pass=admin \
-	 --locale=en \
-	 --site-name="Schema.org Metatag Demo Site" \
-	 --site-mail=admin@example.com -y
 	rsync -av --delete ${TUGBOAT_ROOT}/files/config/sync/ /var/www/html/sites/default/sync
 	drush cim -y
 	

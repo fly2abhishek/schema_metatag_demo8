@@ -62,7 +62,7 @@ createsite:
 	 --account-mail=admin@example.com \
 	 --account-name=admin \
 	 --account-pass=admin \
-	 --locale=en 
+	 --locale=en \
 	 --site-name="Schema.org Metatag Demo Site" \
 	 --site-mail=admin@example.com -y
 	drush cim

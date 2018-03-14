@@ -17,7 +17,7 @@ provider: null
 plugin: 'block_content:9fee52a7-6980-49c3-9f13-00076a69c442'
 settings:
   id: 'block_content:9fee52a7-6980-49c3-9f13-00076a69c442'
-  label: ' Views JSON-LD'
+  label: 'JSON-LD Configuration'
   provider: block_content
   label_display: visible
   status: true

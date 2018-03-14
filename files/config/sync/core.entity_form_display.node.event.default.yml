@@ -4,12 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_actor
+    - field.field.node.event.field_address
     - field.field.node.event.field_country
     - field.field.node.event.field_date
     - field.field.node.event.field_image
+    - field.field.node.event.field_price
     - image.style.thumbnail
     - node.type.event
   module:
+    - address
     - datetime
     - image
     - path
@@ -34,6 +38,22 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_actor:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_address:
+    weight: 27
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+    region: content
   field_country:
     weight: 26
     settings: {  }
@@ -53,6 +73,13 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_price:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   path:
     type: path

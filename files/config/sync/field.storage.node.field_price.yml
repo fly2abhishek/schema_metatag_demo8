@@ -1,19 +1,19 @@
-uuid: 0ea64094-99f5-4ffa-bab9-d03b0113443d
+uuid: 462b0c80-de16-46fc-b4e3-4c1f3c32d4bb
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - user
-id: node.field_actor
-field_name: field_actor
+id: node.field_price
+field_name: field_price
 entity_type: node
-type: entity_reference
+type: decimal
 settings:
-  target_type: user
+  precision: 10
+  scale: 2
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

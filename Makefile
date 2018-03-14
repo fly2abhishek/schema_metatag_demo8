@@ -59,8 +59,8 @@ createdb:
 createsite:
 	cd ${TUGBOAT_ROOT}/web
 	rsync -av --delete ${TUGBOAT_ROOT}/files/config/sync/ /var/www/html/sites/default/sync
-	drush cim -y
-	
+	drush site-install --verbose config_installer config_installer_sync_configure_form.sync_directory=sites/default/sync --yes 
+
 importdb:
 	curl -L "https://www.dropbox.com/s/ji41n0q14qgky9a/demo-drupal8-database.sql.gz?dl=0" > /tmp/database.sql.gz
 	zcat /tmp/database.sql.gz | mysql -h mysql -u tugboat -ptugboat tugboat

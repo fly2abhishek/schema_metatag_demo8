@@ -17,7 +17,7 @@ provider: null
 plugin: 'block_content:f3cb1759-004c-4791-b389-b56e353ccbe2'
 settings:
   id: 'block_content:f3cb1759-004c-4791-b389-b56e353ccbe2'
-  label: 'Content JSON-LD'
+  label: 'JSON-LD Configuration'
   provider: block_content
   label_display: visible
   status: true

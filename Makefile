@@ -42,6 +42,8 @@ packages:
 	. /etc/profile.d/container_environment.sh
 
 drupalconfig:
+	# Symlink the Drupal root in the repository to the container web root.
+	ln -sf ${TUGBOAT_ROOT}/web /var/www/html
 	cp ${TUGBOAT_ROOT}/dist/settings.php /var/www/html/sites/default/settings.php
 	cp ${TUGBOAT_ROOT}/dist/tugboat.settings.php /var/www/html/sites/default/settings.local.php
 	echo "\$$settings['hash_salt'] = '$$(openssl rand -hex 32)';" >> /var/www/html/sites/default/settings.local.php
@@ -50,8 +52,6 @@ drupalconfig:
 	chgrp -R www-data web/sites/default
 	chmod -R g+w web/sites/default/files
 	chmod 2775 web/sites/default/files
-	# Symlink the Drupal root in the repository to the container web root.
-	ln -sf ${TUGBOAT_ROOT}/web /var/www/html
 
 createdb:
 	mysql -h mysql -u tugboat -ptugboat -e "create database tugboat;"

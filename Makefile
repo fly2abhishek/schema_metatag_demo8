@@ -47,7 +47,7 @@ drupalconfig:
 	cp ${TUGBOAT_ROOT}/dist/settings.php /var/www/html/sites/default/settings.php
 	cp ${TUGBOAT_ROOT}/dist/tugboat.settings.php /var/www/html/sites/default/settings.local.php
 	echo "\$$settings['hash_salt'] = '$$(openssl rand -hex 32)';" >> /var/www/html/sites/default/settings.local.php
-	echo "\$$settings['trusted_host_patterns'][] = '^$$TUGBOAT_PREVIEW_ID\.tugboat\.qa\$$';" >> /var/www/html/sites/default/settings.local.php
+	echo "\$$settings['trusted_host_patterns'][] = '^$$TUGBOAT_PROXY_URL\.tugboat\.qa\$$';" >> /var/www/html/sites/default/settings.local.php
 	mkdir -p web/sites/default/files
 	chgrp -R www-data web/sites/default
 	chmod -R g+w web/sites/default/files

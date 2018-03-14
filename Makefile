@@ -65,6 +65,7 @@ createsite:
 	 --locale=en \
 	 --site-name="Schema.org Metatag Demo Site" \
 	 --site-mail=admin@example.com -y
+	rsync -av --delete ${TUGBOAT_ROOT}/files/config/sync/ /var/www/html/sites/default/sync
 	drush cim -y
 	
 importdb:

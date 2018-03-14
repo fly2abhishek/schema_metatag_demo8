@@ -65,7 +65,7 @@ createsite:
 	 --locale=en \
 	 --site-name="Schema.org Metatag Demo Site" \
 	 --site-mail=admin@example.com -y
-	drush cim
+	drush cim -y
 	
 importdb:
 	curl -L "https://www.dropbox.com/s/ji41n0q14qgky9a/demo-drupal8-database.sql.gz?dl=0" > /tmp/database.sql.gz

@@ -1,4 +1,5 @@
 packages:
+	# Swap PHP 7.0 with PHP 7.1.
 	apt-get install -y python-software-properties software-properties-common
 	add-apt-repository -y ppa:ondrej/php
 	apt-get update
@@ -36,14 +37,16 @@ packages:
 		rsync
 	a2enmod php7.1
 	a2dismod php7.0
-	composer install --no-ansi --no-interaction
-	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 	echo "export PATH=\"${TUGBOAT_ROOT}/vendor/bin:${PATH}\"" >> /etc/profile.d/container_environment.sh
 	. /etc/profile.d/container_environment.sh
-
-drupalconfig:
-	# Symlink the Drupal root in the repository to the container web root.
+	# Symlink the repository web root to the container web root.
 	ln -sf ${TUGBOAT_ROOT}/web /var/www/html
+	# Clean up.
+	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+drupalsetup:
+	# Drupal-specific configuration, assumes copy of settings.php in /dist.
+	composer install --no-ansi --no-interaction
 	cp ${TUGBOAT_ROOT}/dist/settings.php /var/www/html/sites/default/settings.php
 	cp ${TUGBOAT_ROOT}/dist/tugboat.settings.php /var/www/html/sites/default/settings.local.php
 	echo "\$$settings['hash_salt'] = '$$(openssl rand -hex 32)';" >> /var/www/html/sites/default/settings.local.php
@@ -51,23 +54,37 @@ drupalconfig:
 	chgrp -R www-data web/sites/default
 	chmod -R g+w web/sites/default/files
 	chmod 2775 web/sites/default/files
-
-createdb:
 	mysql -h mysql -u tugboat -ptugboat -e "create database tugboat;"
 
-createsite:
-	cd ${TUGBOAT_ROOT}/web
-	rsync -av --delete ${TUGBOAT_ROOT}/files/config/sync/ /var/www/html/sites/default/sync
-	drush site-install --verbose config_installer config_installer_sync_configure_form.sync_directory=sites/default/sync --yes 
-
-importdb:
+createfromimport:
+	# Create site from a db dump and files from another site.
+	# Assumes db and files exports are in Dropbox.
 	curl -L "https://www.dropbox.com/s/ji41n0q14qgky9a/demo-drupal8-database.sql.gz?dl=0" > /tmp/database.sql.gz
 	zcat /tmp/database.sql.gz | mysql -h mysql -u tugboat -ptugboat tugboat
-
-importfiles:
 	curl -L "https://www.dropbox.com/s/jveuu586eb49kho/demo-drupal8-files.tar.gz?dl=0" > /tmp/files.tar.gz
 	tar -C /tmp -zxf /tmp/files.tar.gz
 	rsync -av --delete /tmp/files/ /var/www/html/sites/default/files/
+
+createfromprofile:
+	# Create vanilla site from a profile.
+	# You can also use core's demo_umami profile instead of standard profile.
+	cd ${TUGBOAT_ROOT}/web
+	drush site-install standard \
+	 --account-mail=admin@example.com \
+	 --account-name=admin \
+	 --account-pass=admin \
+	 --locale=en \
+	 --site-name="Demo Drupal 8 Site" \
+	 --site-mail=admin@example.com -y
+
+createfromconfig:
+	# Create site from a config export.
+	# Assumes config export is in /dist/sync.
+	# See https;//www.drupal.org/project/config_export.
+	composer require drupal/config_export
+	cd ${TUGBOAT_ROOT}/web
+	rsync -av --delete ${TUGBOAT_ROOT}/dist/sync/ /var/www/html/sites/default/sync
+	drush site-install --verbose config_installer config_installer_sync_configure_form.sync_directory=sites/default/sync --yes 
 
 build:
 	drush -r /var/www/html cache-rebuild
@@ -77,6 +94,8 @@ cleanup:
 	apt-get clean
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-tugboat-init: packages createdb drupalconfig createsite build cleanup
-tugboat-update: createsite build cleanup
+# Swap in the desired method of creating the site, createfromimport, 
+# createfromprofile, or createfromconfig.
+tugboat-init: packages drupalsetup createfromimport build cleanup
+tugboat-update: createfromimport build cleanup
 tugboat-build: build

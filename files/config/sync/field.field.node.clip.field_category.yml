@@ -1,0 +1,23 @@
+uuid: c2a7c2c6-1218-470c-8351-1bdd2e8bc5f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.clip
+  module:
+    - options
+id: node.clip.field_category
+field_name: field_category
+entity_type: node
+bundle: clip
+label: Category
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: purchase
+default_value_callback: ''
+settings: {  }
+field_type: list_string

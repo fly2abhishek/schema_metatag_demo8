@@ -1,0 +1,23 @@
+uuid: 95b6694d-662b-4d9a-a8c0-97b30b5050fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_times_watched
+    - node.type.clip
+id: node.clip.field_times_watched
+field_name: field_times_watched
+entity_type: node
+bundle: clip
+label: 'Times Watched'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

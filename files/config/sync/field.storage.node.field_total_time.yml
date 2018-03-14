@@ -1,0 +1,19 @@
+uuid: 75a80445-44b9-4226-a217-89a685b4dcba
+langcode: en
+status: true
+dependencies:
+  module:
+    - duration_field
+    - node
+id: node.field_total_time
+field_name: field_total_time
+entity_type: node
+type: duration
+settings: {  }
+module: duration_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

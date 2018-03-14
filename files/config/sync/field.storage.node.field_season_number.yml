@@ -1,0 +1,20 @@
+uuid: 6ff8fed3-aea8-4f98-9f91-d4173ab83d27
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_season_number
+field_name: field_season_number
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

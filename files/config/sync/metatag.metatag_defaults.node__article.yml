@@ -1,0 +1,20 @@
+uuid: 5051d2a7-e6b6-480c-9c6d-dab71c2bae5d
+langcode: en
+status: true
+dependencies: {  }
+id: node__article
+label: 'Content: Article'
+tags:
+  schema_article_date_modified: '[node:changed:html_datetime]'
+  schema_article_type: NewsArticle
+  schema_article_has_part: 'a:3:{s:5:"@type";s:14:"WebPageElement";s:19:"isAccessibleForFree";s:5:"FALSE";s:11:"cssSelector";s:19:".paywall1,.paywall2";}'
+  schema_article_is_accessible_for_free: 'False'
+  schema_article_main_entity_of_page: '[current-page:url]'
+  schema_article_image: 'a:4:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:29:"[node:field_image:medium:uri]";s:5:"width";s:31:"[node:field_image:medium:width]";s:6:"height";s:32:"[node:field_image:medium:height]";}'
+  schema_article_headline: '[node:title]'
+  schema_article_publisher: 'a:4:{s:5:"@type";s:12:"Organization";s:4:"name";s:11:"[site:name]";s:3:"url";s:10:"[site:url]";s:4:"logo";a:4:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:35:"sites/default/files/square-logo.png";s:5:"width";s:3:"100";s:6:"height";s:2:"93";}}'
+  schema_article_about: '[node:field_tags]'
+  schema_article_name: '[node:title]'
+  schema_article_description: '[node:summary]'
+  schema_article_date_published: '[node:created:html_datetime]'
+  schema_article_author: 'a:3:{s:5:"@type";s:6:"Person";s:4:"name";s:26:"[node:author:display_name]";s:3:"url";s:17:"[node:author:url]";}'

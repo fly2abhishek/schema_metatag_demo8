@@ -1,0 +1,23 @@
+uuid: 1c914de2-ee7e-4731-9156-4e51aa02c9e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_menu
+    - node.type.organization
+  module:
+    - link
+id: node.organization.field_menu
+field_name: field_menu
+entity_type: node
+bundle: organization
+label: Menu
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

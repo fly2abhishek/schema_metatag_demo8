@@ -1,0 +1,18 @@
+uuid: 67cf0bac-9316-439d-81db-1f1e5b09bdf4
+langcode: en
+status: true
+dependencies: {  }
+id: node__organization
+label: 'Content: Organization'
+tags:
+  schema_organization_logo: 'a:4:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:31:"[node:field_logo:thumbnail:url]";s:5:"width";s:33:"[node:field_logo:thumbnail:width]";s:6:"height";s:34:"[node:field_logo:thumbnail:height]";}'
+  schema_organization_id: '[node:field_web_site]'
+  schema_organization_menu: '[node:field_menu:uri]'
+  schema_organization_url: '[node:field_web_site]'
+  schema_organization_same_as: '[node:field_social_links]'
+  schema_organization_name: '[node:title]'
+  schema_organization_address: 'a:6:{s:5:"@type";s:13:"PostalAddress";s:13:"streetAddress";s:34:"[node:field_address:address_line1]";s:15:"addressLocality";s:29:"[node:field_address:locality]";s:13:"addressRegion";s:40:"[node:field_address:administrative_area]";s:10:"postalCode";s:32:"[node:field_address:postal_code]";s:14:"addressCountry";s:33:"[node:field_address:country_code]";}'
+  schema_organization_opening_hours_specification: 'a:5:{s:5:"pivot";s:1:"1";s:5:"@type";s:25:"OpeningHoursSpecification";s:9:"dayOfWeek";s:125:"[node:field_reference:0:entity:field_day],[node:field_reference:1:entity:field_day],[node:field_reference:2:entity:field_day]";s:5:"opens";s:137:"[node:field_reference:0:entity:field_opening],[node:field_reference:1:entity:field_opening],[node:field_reference:2:entity:field_opening]";s:6:"closes";s:137:"[node:field_reference:0:entity:field_closing],[node:field_reference:1:entity:field_closing],[node:field_reference:2:entity:field_closing]";}'
+  schema_organization_image: 'a:4:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:29:"[node:field_image:medium:url]";s:5:"width";s:31:"[node:field_image:medium:width]";s:6:"height";s:32:"[node:field_image:medium:height]";}'
+  schema_organization_main_entity_of_page: '[current-page:url]'
+  schema_organization_type: Organization

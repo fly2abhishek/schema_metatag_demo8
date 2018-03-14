@@ -1,0 +1,23 @@
+uuid: 946595c9-fdf3-44d6-a436-7ad3c0e2e1b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.clip
+  module:
+    - options
+id: node.clip.field_country
+field_name: field_country
+entity_type: node
+bundle: clip
+label: Country
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: us
+default_value_callback: ''
+settings: {  }
+field_type: list_string

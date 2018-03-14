@@ -1,0 +1,17 @@
+uuid: 1ccdaa99-b162-4554-b758-9559ca4c6ee8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  shortlink: '[site:url]'
+  canonical_url: '[site:url]'
+  schema_web_site_url: '[site:url]'
+  schema_web_site_publisher: 'a:6:{s:5:"@type";s:12:"Organization";s:3:"@id";s:10:"[site:url]";s:4:"name";s:11:"[site:name]";s:3:"url";s:10:"[site:url]";s:6:"sameAs";s:0:"";s:4:"logo";a:6:{s:5:"pivot";s:0:"";s:5:"@type";s:0:"";s:20:"representativeOfPage";s:0:"";s:3:"url";s:0:"";s:5:"width";s:0:"";s:6:"height";s:0:"";}}'
+  schema_web_site_potential_action: 'a:3:{s:5:"@type";s:12:"SearchAction";s:5:"query";s:38:"/search/node?keys=[search_term_string]";s:11:"query-input";s:23:"name=search_term_string";}'
+  schema_web_site_type: WebSite
+  schema_web_site_id: '[site:url]'
+  schema_web_site_name: '[site:name]'

@@ -1,0 +1,28 @@
+uuid: 698d7131-fd16-4335-93a6-c1df977a6620
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tvseason
+    - node.type.tv_episode
+    - node.type.tv_season
+id: node.tv_episode.field_tvseason
+field_name: field_tvseason
+entity_type: node
+bundle: tv_episode
+label: TVSeason
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tv_season: tv_season
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

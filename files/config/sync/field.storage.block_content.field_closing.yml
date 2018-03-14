@@ -1,0 +1,20 @@
+uuid: 91a5dc6a-a5ba-47ca-826f-1f041491197b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - datetime
+id: block_content.field_closing
+field_name: field_closing
+entity_type: block_content
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

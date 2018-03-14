@@ -1,0 +1,43 @@
+uuid: 8a7692d6-0f1a-409e-876c-c06ca9adcb4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hours
+    - field.field.block_content.hours.field_closing
+    - field.field.block_content.hours.field_day
+    - field.field.block_content.hours.field_opening
+  module:
+    - datetime
+id: block_content.hours.default
+targetEntityType: block_content
+bundle: hours
+mode: default
+content:
+  field_closing:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_day:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_opening:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

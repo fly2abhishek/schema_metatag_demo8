@@ -1,0 +1,23 @@
+uuid: 1cf2b2f4-7d20-41d8-9494-45643db83226
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_links
+    - node.type.book
+  module:
+    - link
+id: node.book.field_social_links
+field_name: field_social_links
+entity_type: node
+bundle: book
+label: 'Social Links'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

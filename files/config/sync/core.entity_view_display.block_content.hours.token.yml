@@ -1,0 +1,44 @@
+uuid: ad6a3ba8-fca1-414d-b22a-d2916dab4916
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hours
+    - core.entity_view_mode.block_content.token
+    - field.field.block_content.hours.field_closing
+    - field.field.block_content.hours.field_day
+    - field.field.block_content.hours.field_opening
+  module:
+    - datetime
+    - options
+id: block_content.hours.token
+targetEntityType: block_content
+bundle: hours
+mode: token
+content:
+  field_closing:
+    type: datetime_default
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_time
+    third_party_settings: {  }
+  field_day:
+    type: list_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_opening:
+    type: datetime_default
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_time
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 1d509c6e-e61d-469a-af72-cae001725f71
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: e3453dXHFW5TM24d8Odhumgwd8hIZVPvQv98wnGM7Ro
+id: user
+label: User
+tags:
+  title: '[user:name] | [site:name]'
+  canonical_url: '[user:url]'
+  description: '[site:name]'
+  schema_person_type: Person
+  schema_person_same_as: '[user:field_social_links]'
+  schema_person_image: 'a:5:{s:5:"@type";s:11:"ImageObject";s:20:"representativeOfPage";s:0:"";s:3:"url";s:29:"[user:user_picture:large:url]";s:5:"width";s:31:"[user:user_picture:large:width]";s:6:"height";s:32:"[user:user_picture:large:height]";}'
+  schema_person_email: '[user:mail]'
+  schema_person_url: '[user:url]'
+  schema_person_name: '[user:display-name]'
+  schema_person_job_title: '[user:field_job_title]'

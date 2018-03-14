@@ -1,0 +1,42 @@
+uuid: 6e7e76c2-64af-4b49-97a5-6843fa5a86d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tv_show.body
+    - field.field.node.tv_show.field_actor
+    - field.field.node.tv_show.field_director
+    - field.field.node.tv_show.field_event
+    - field.field.node.tv_show.field_image
+    - field.field.node.tv_show.field_social_links
+    - image.style.medium
+    - node.type.tv_show
+  module:
+    - image
+    - user
+id: node.tv_show.teaser
+targetEntityType: node
+bundle: tv_show
+mode: teaser
+content:
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_actor: true
+  field_director: true
+  field_event: true
+  field_social_links: true

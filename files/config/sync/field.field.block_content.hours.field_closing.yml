@@ -1,0 +1,24 @@
+uuid: 7e226dbc-a1cb-4801-bf0b-fec7b00e3b70
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hours
+    - field.storage.block_content.field_closing
+  module:
+    - datetime
+id: block_content.hours.field_closing
+field_name: field_closing
+entity_type: block_content
+bundle: hours
+label: Closing
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

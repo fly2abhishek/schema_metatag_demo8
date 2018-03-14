@@ -1,0 +1,30 @@
+uuid: 498a14f6-84b0-4a1d-9d99-18160f0111ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration
+    - node.type.clip
+  module:
+    - duration_field
+id: node.clip.field_duration
+field_name: field_duration
+entity_type: node
+bundle: clip
+label: Duration
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: PT1H30M
+default_value_callback: ''
+settings:
+  granularity:
+    hour: true
+    minute: true
+    second: true
+    year: false
+    month: false
+    day: false
+field_type: duration

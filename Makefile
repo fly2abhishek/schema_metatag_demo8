@@ -72,7 +72,7 @@ drupalsetup:
 	cp ${SETTINGS_SOURCE} ${CONTAINER_ROOT}/${SITE_DIR}/settings.php
 	cp ${SETTINGS_LOCAL_SOURCE} ${CONTAINER_ROOT}/${SITE_DIR}/settings.local.php
 	echo "\$$settings['hash_salt'] = '$$(openssl rand -hex 32)';" >> ${CONTAINER_ROOT}/${SITE_DIR}/settings.local.php
-	echo "\$$config_directories['sync'] = ${CONFIG_DIR};" >> ${CONTAINER_ROOT}/${SITE_DIR}/settings.local.php
+	echo "\$$config_directories['sync'] = '${CONFIG_DIR}';" >> ${CONTAINER_ROOT}/${SITE_DIR}/settings.local.php
 	mkdir -p ${DRUPAL_ROOT}/${FILES_DIR}
 	chgrp -R www-data ${DRUPAL_ROOT}/${SITE_DIR}
 	chmod -R g+w ${DRUPAL_ROOT}/${FILES_DIR}

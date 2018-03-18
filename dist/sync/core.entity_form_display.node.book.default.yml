@@ -9,11 +9,15 @@ dependencies:
     - field.field.node.book.field_date_published
     - field.field.node.book.field_edition
     - field.field.node.book.field_format
+    - field.field.node.book.field_image
     - field.field.node.book.field_isbn
+    - field.field.node.book.field_reviews
     - field.field.node.book.field_social_links
+    - image.style.thumbnail
     - node.type.book
   module:
     - datetime
+    - image
     - link
     - path
     - text
@@ -75,6 +79,14 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_image:
+    weight: 130
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_isbn:
     weight: 123
     settings:
@@ -82,6 +94,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_reviews:
+    weight: 131
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_social_links:
     weight: 122

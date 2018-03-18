@@ -1,0 +1,18 @@
+uuid: 33dbc542-cb6f-4cb1-8c11-5554f7d6e769
+langcode: en
+status: true
+dependencies: {  }
+id: node__tv_season
+label: 'Content: TV Season'
+tags:
+  schema_movie_same_as: '[node:field_social_links]'
+  schema_movie_url: '[node:url]'
+  schema_movie_name: '[node:title]'
+  schema_movie_image: 'a:5:{s:5:"@type";s:11:"ImageObject";s:20:"representativeOfPage";s:4:"True";s:3:"url";s:28:"[node:field_image:large:url]";s:5:"width";s:30:"[node:field_image:large:width]";s:6:"height";s:31:"[node:field_image:large:height]";}'
+  schema_movie_date_created: '[node:created:html_datetime]'
+  schema_movie_part_of_series: 'a:4:{s:5:"@type";s:8:"TVSeries";s:3:"@id";s:30:"[node:field_tvshow:entity:url]";s:4:"name";s:32:"[node:field_tvshow:entity:title]";s:3:"url";s:30:"[node:field_tvshow:entity:url]";}'
+  schema_movie_has_part: 'a:6:{s:5:"@type";s:6:"TVClip";s:3:"@id";s:28:"[node:field_clip:entity:url]";s:4:"name";s:30:"[node:field_clip:entity:title]";s:11:"description";s:32:"[node:field_clip:entity:summary]";s:12:"timeRequired";s:33:"[node:field_clip:entity:duration]";s:15:"potentialAction";a:2:{s:5:"@type";s:11:"WatchAction";s:6:"target";a:4:{s:5:"@type";s:10:"EntryPoint";s:11:"urlTemplate";s:34:"[node:field_clip:entity:url]?watch";s:14:"actionPlatform";s:75:"https://schema.org/DesktopWebPlatform, https://schema.org/MobileWebPlatform";s:10:"inLanguage";s:5:"en-US";}}}'
+  schema_movie_season_number: '[node:field_season_number]'
+  schema_movie_description: '[node:summary]'
+  schema_movie_type: TVSeason
+  schema_movie_id: '[node:url]'

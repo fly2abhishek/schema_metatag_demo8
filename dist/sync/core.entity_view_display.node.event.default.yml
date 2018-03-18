@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.event.field_date
     - field.field.node.event.field_image
     - field.field.node.event.field_price
+    - field.field.node.event.field_reviews
+    - image.style.extra_large
     - node.type.event
   module:
     - address
@@ -65,7 +67,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: extra_large
       image_link: ''
     third_party_settings: {  }
     type: image
@@ -80,6 +82,14 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_decimal
+    region: content
+  field_reviews:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   links:
     weight: 4

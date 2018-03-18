@@ -1,0 +1,28 @@
+uuid: 3a39a265-dfd9-4d06-9cda-94ba07e80740
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reviews
+    - node.type.event
+    - node.type.review
+id: node.event.field_reviews
+field_name: field_reviews
+entity_type: node
+bundle: event
+label: Reviews
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      review: review
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

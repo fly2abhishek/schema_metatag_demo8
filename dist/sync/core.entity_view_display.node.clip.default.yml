@@ -10,9 +10,11 @@ dependencies:
     - field.field.node.clip.field_embed_url
     - field.field.node.clip.field_end_date
     - field.field.node.clip.field_image
+    - field.field.node.clip.field_reviews
     - field.field.node.clip.field_start_date
     - field.field.node.clip.field_times_watched
     - field.field.node.clip.field_url
+    - image.style.extra_large
     - node.type.clip
   module:
     - datetime
@@ -82,10 +84,18 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: extra_large
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_reviews:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_start_date:
     weight: 5

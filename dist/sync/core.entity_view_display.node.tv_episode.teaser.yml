@@ -5,8 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.tv_episode.body
+    - field.field.node.tv_episode.field_actor
+    - field.field.node.tv_episode.field_country
     - field.field.node.tv_episode.field_episode_number
     - field.field.node.tv_episode.field_image
+    - field.field.node.tv_episode.field_social_links
+    - field.field.node.tv_episode.field_total_time
     - field.field.node.tv_episode.field_tvseason
     - field.field.node.tv_episode.field_tvshow
     - image.style.medium
@@ -21,7 +25,7 @@ mode: teaser
 content:
   field_episode_number:
     type: number_integer
-    weight: 1
+    weight: 3
     region: content
     label: above
     settings:
@@ -37,12 +41,30 @@ content:
       image_style: medium
       image_link: content
     third_party_settings: {  }
-  links:
+  field_tvseason:
+    type: entity_reference_label
     weight: 2
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_tvshow:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
-  field_tvseason: true
-  field_tvshow: true
+  field_actor: true
+  field_country: true
+  field_social_links: true
+  field_total_time: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.tv_season.body
     - field.field.node.tv_season.field_image
+    - field.field.node.tv_season.field_reviews
     - field.field.node.tv_season.field_season_number
     - field.field.node.tv_season.field_tvshow
     - image.style.thumbnail
@@ -40,6 +41,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_reviews:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_season_number:
     weight: 10

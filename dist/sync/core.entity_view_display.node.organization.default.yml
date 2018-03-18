@@ -9,9 +9,10 @@ dependencies:
     - field.field.node.organization.field_logo
     - field.field.node.organization.field_menu
     - field.field.node.organization.field_reference
+    - field.field.node.organization.field_reviews
     - field.field.node.organization.field_social_links
     - field.field.node.organization.field_web_site
-    - image.style.large
+    - image.style.extra_large
     - node.type.organization
   module:
     - address
@@ -42,7 +43,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: large
+      image_style: extra_large
       image_link: ''
     third_party_settings: {  }
     type: image
@@ -67,6 +68,14 @@ content:
       view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_reviews:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_social_links:
     weight: 3

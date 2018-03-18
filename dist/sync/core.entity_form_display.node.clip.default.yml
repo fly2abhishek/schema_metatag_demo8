@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.clip.field_embed_url
     - field.field.node.clip.field_end_date
     - field.field.node.clip.field_image
+    - field.field.node.clip.field_reviews
     - field.field.node.clip.field_start_date
     - field.field.node.clip.field_times_watched
     - field.field.node.clip.field_url
@@ -82,6 +83,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_reviews:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_start_date:
     weight: 12

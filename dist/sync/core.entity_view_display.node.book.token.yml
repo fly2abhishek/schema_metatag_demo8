@@ -5,15 +5,18 @@ dependencies:
   config:
     - core.entity_view_mode.node.token
     - field.field.node.book.body
+    - field.field.node.book.field_author
     - field.field.node.book.field_children
     - field.field.node.book.field_date_published
     - field.field.node.book.field_edition
     - field.field.node.book.field_format
+    - field.field.node.book.field_image
     - field.field.node.book.field_isbn
     - field.field.node.book.field_social_links
     - node.type.book
   module:
     - datetime
+    - image
     - link
     - options
     - text
@@ -30,6 +33,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_author:
+    type: entity_reference_label
+    weight: 8
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
   field_children:
     weight: 4
     label: above
@@ -62,6 +73,14 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_image:
+    type: image_url
+    weight: 7
+    region: content
+    label: above
+    settings:
+      image_style: ''
+    third_party_settings: {  }
   field_isbn:
     weight: 1
     label: above
@@ -83,7 +102,7 @@ content:
     type: link
     region: content
   links:
-    weight: 7
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }

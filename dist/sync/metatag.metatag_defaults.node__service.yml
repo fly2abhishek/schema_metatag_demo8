@@ -1,0 +1,12 @@
+uuid: 32f0319f-5b8a-4c75-9d7f-3c8aaafb0eb2
+langcode: en
+status: true
+dependencies: {  }
+id: node__service
+label: 'Content: Service'
+tags:
+  schema_service_description: '[node:summary]'
+  schema_service_name: '[node:title]'
+  schema_service_image: 'a:5:{s:5:"@type";s:11:"ImageObject";s:20:"representativeOfPage";s:4:"True";s:3:"url";s:28:"[node:field_image:large:url]";s:5:"width";s:30:"[node:field_image:large:width]";s:6:"height";s:31:"[node:field_image:large:height]";}'
+  schema_service_offers: 'a:6:{s:5:"@type";s:5:"Offer";s:3:"@id";s:10:"[node:url]";s:5:"price";s:18:"[node:field_price]";s:13:"priceCurrency";s:3:"USD";s:3:"url";s:10:"[node:url]";s:14:"eligibleRegion";a:2:{s:5:"@type";s:7:"Country";s:4:"name";s:20:"[node:field_country]";}}'
+  schema_service_type: Service

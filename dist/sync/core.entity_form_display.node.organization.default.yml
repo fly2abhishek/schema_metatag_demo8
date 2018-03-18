@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.organization.field_logo
     - field.field.node.organization.field_menu
     - field.field.node.organization.field_reference
+    - field.field.node.organization.field_reviews
     - field.field.node.organization.field_social_links
     - field.field.node.organization.field_web_site
     - image.style.thumbnail
@@ -78,6 +79,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_reviews:
+    weight: 129
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_social_links:
     weight: 122

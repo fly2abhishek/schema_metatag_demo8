@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.field_date
     - field.field.node.event.field_image
     - field.field.node.event.field_price
+    - field.field.node.event.field_reviews
     - image.style.thumbnail
     - node.type.event
   module:
@@ -80,6 +81,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_reviews:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   path:
     type: path

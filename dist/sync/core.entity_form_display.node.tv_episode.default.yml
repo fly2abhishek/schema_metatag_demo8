@@ -4,14 +4,22 @@ status: true
 dependencies:
   config:
     - field.field.node.tv_episode.body
+    - field.field.node.tv_episode.field_actor
+    - field.field.node.tv_episode.field_clip
+    - field.field.node.tv_episode.field_country
     - field.field.node.tv_episode.field_episode_number
     - field.field.node.tv_episode.field_image
+    - field.field.node.tv_episode.field_reviews
+    - field.field.node.tv_episode.field_social_links
+    - field.field.node.tv_episode.field_total_time
     - field.field.node.tv_episode.field_tvseason
     - field.field.node.tv_episode.field_tvshow
     - image.style.thumbnail
     - node.type.tv_episode
   module:
+    - duration_field
     - image
+    - link
     - path
     - text
 id: node.tv_episode.default
@@ -34,6 +42,30 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_actor:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_clip:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_country:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_episode_number:
     weight: 11
     settings:
@@ -48,6 +80,27 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_reviews:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_social_links:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_total_time:
+    weight: 27
+    settings:
+      duration: ''
+    third_party_settings: {  }
+    type: duration_widget
     region: content
   field_tvseason:
     weight: 10

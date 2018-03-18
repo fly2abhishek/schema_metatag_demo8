@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.field_image
+    - field.field.node.article.field_reviews
     - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
@@ -42,11 +43,20 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_reviews:
+    weight: 121
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 3
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

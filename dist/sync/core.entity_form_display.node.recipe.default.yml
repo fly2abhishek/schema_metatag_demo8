@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.recipe.field_preparation_time
     - field.field.node.recipe.field_recipe_category
     - field.field.node.recipe.field_recipe_instruction
+    - field.field.node.recipe.field_reviews
     - field.field.node.recipe.field_serving_size
     - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_total_time
@@ -94,6 +95,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_reviews:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_serving_size:
     weight: 17

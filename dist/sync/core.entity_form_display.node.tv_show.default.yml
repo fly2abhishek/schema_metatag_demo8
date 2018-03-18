@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.tv_show.field_director
     - field.field.node.tv_show.field_event
     - field.field.node.tv_show.field_image
+    - field.field.node.tv_show.field_reviews
     - field.field.node.tv_show.field_social_links
     - image.style.thumbnail
     - node.type.tv_show
@@ -70,6 +71,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_reviews:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_social_links:
     weight: 26

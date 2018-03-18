@@ -4,8 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.service.body
+    - field.field.node.service.field_country
+    - field.field.node.service.field_image
+    - field.field.node.service.field_price
+    - field.field.node.service.field_reviews
+    - image.style.thumbnail
     - node.type.service
   module:
+    - image
     - path
     - text
 id: node.service.default
@@ -28,6 +34,33 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_country:
+    weight: 124
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_image:
+    weight: 122
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_price:
+    weight: 123
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_reviews:
+    weight: 125
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   path:
     type: path
     weight: 30

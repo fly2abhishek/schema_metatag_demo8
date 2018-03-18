@@ -1,0 +1,28 @@
+uuid: bc3a969e-b179-4df0-b664-7f46aa651acc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reviews
+    - node.type.review
+    - node.type.tv_show
+id: node.tv_show.field_reviews
+field_name: field_reviews
+entity_type: node
+bundle: tv_show
+label: Reviews
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      review: review
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

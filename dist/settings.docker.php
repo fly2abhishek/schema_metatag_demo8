@@ -151,7 +151,7 @@ $host =  $_SERVER['COMPOSE_PROJECT_NAME'] . '.docker.localhost';
 $settings['trusted_host_patterns'][] = '^' . str_replace('.', '\.', $host) . '$';
 
 // Settings for a demo site that will generate lots of unused files as things
-// are tested and deleted.
+// are tested and deleted, see https://www.drupal.org/node/2891902.
 // Use legacy process of marking unused files as temporary.
 $config['file.settings']['make_unused_managed_files_temporary'] = 'true';
 // Delete temporary files after 60 seconds.

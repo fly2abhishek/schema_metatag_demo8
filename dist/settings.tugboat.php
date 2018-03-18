@@ -13,7 +13,7 @@ $settings['install_profile'] = 'standard';
 $config_directories[CONFIG_SYNC_DIRECTORY] = 'sites/default/sync';
 
 // Settings for a demo site that will generate lots of unused files as content
-// is tested and deleted.
+// is tested and deleted, see https://www.drupal.org/node/2891902.
 // Revert to legacy process of marking unused files as temporary.
 // Default value is 'false'.
 $config['file.settings']['make_unused_managed_files_temporary'] = 'true';

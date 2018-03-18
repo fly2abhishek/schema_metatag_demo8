@@ -95,7 +95,7 @@ createfromprofile:
 
 createfromconfig:
 	# Create Tugboat site from config export using https://www.drupal.org/project/config_export.
-	# composer require drupal/config_installer
+	composer require "drupal/config_installer"
 	echo pwd
 	rsync -av --delete ${CONFIG_SOURCE} ${CONTAINER_ROOT}/${CONFIG_DIR}
 	cd ${DRUPAL_ROOT}
@@ -111,6 +111,6 @@ cleanup:
 
 # Swap in the desired method of creating the site:
 # createfromdump, createfromprofile, or createfromconfig.
-tugboat-init: packageinstallation drupalsetup createfromprofile build cleanup
-tugboat-update: createfromprofile build cleanup
+tugboat-init: packageinstallation drupalsetup createfromconfig build cleanup
+tugboat-update: createfromconfig build cleanup
 tugboat-build: build

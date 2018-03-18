@@ -12,7 +12,7 @@ CONFIG_DIR=${SITE_DIR}/sync
 
 # Set the site creation method in tugboat-init, tugboat-update, and tugboat-build:
 # createfromprofile:
-DRUPAL_PROFILE=standard
+DRUPAL_PROFILE=demo_umami
 DRUPAL_PROFILE_SETTINGS= --account-pass=admin --site-name='Demo Drupal 8 Site'
 # createfromconfig:
 CONFIG_SOURCE=${REPO_ROOT}/dist/sync/
@@ -111,6 +111,6 @@ cleanup:
 
 # Swap in the desired method of creating the site:
 # createfromdump, createfromprofile, or createfromconfig.
-tugboat-init: packageinstallation drupalsetup createfromconfig build cleanup
-tugboat-update: createfromconfig build cleanup
+tugboat-init: packageinstallation drupalsetup createfromprofile build cleanup
+tugboat-update: createfromprofile build cleanup
 tugboat-build: build

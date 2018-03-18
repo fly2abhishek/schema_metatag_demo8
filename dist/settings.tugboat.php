@@ -13,9 +13,9 @@ $settings['install_profile'] = 'standard';
 $config_directories[CONFIG_SYNC_DIRECTORY] = 'sites/default/sync';
 
 // Add trusted host setting.
-$host = str_replace('https://', '', $_SERVER['HTTP_HOST']);
+$host = str_replace('https://', '', $TUGBOAT_URL);
 $settings['trusted_host_patterns'][] = '^' . str_replace('.', '\.', $host) . '$';
-$settings['trusted_host_patterns'][] = '^*\.tugboat\.qa$';
+$settings['trusted_host_patterns'][] = '^*.\.tugboat\.qa$';
 print_r($settings);
 
 // Settings for a demo site that will generate lots of unused files as content

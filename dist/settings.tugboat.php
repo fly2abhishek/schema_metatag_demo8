@@ -14,8 +14,6 @@ $config_directories[CONFIG_SYNC_DIRECTORY] = 'sites/default/sync';
 
 // Add trusted host setting.
 $settings['trusted_host_patterns'][] = '^.+' . $_SERVER['HTTP_X_TUGBOAT_PREVIEW_TOKEN'] . '\.tugboat\.qa$';
-print_r($settings);
-print_r($_SERVER);
 
 // Settings for a demo site that will generate lots of unused files as content
 // is tested and deleted, see https://www.drupal.org/node/2891902.

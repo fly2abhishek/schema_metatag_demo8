@@ -95,8 +95,8 @@ createfromprofile:
 
 createfromconfig:
 	# Create Tugboat site from config export using https://www.drupal.org/project/config_export.
+	pwd
 	composer require "drupal/config_installer" --no-ansi --no-interaction
-	echo pwd
 	rsync -av --delete ${CONFIG_SOURCE} ${CONTAINER_ROOT}/${CONFIG_DIR}
 	cd ${DRUPAL_ROOT}
 	drush site-install --verbose config_installer config_installer_sync_configure_form.sync_directory=${CONFIG_DIR} --yes 

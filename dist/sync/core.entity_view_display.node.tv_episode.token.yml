@@ -1,8 +1,9 @@
-uuid: bc87ba82-4709-4a41-9855-770fe27aad9b
+uuid: ebedaf35-53de-4465-9ad0-691a35fc1794
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.token
     - field.field.node.tv_episode.body
     - field.field.node.tv_episode.field_actor
     - field.field.node.tv_episode.field_clip
@@ -21,10 +22,10 @@ dependencies:
     - options
     - text
     - user
-id: node.tv_episode.default
+id: node.tv_episode.token
 targetEntityType: node
 bundle: tv_episode
-mode: default
+mode: token
 content:
   body:
     label: hidden
@@ -87,10 +88,10 @@ content:
     label: above
     settings:
       trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
     type: link
     region: content

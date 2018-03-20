@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.recipe.body
     - field.field.node.recipe.field_calories
     - field.field.node.recipe.field_cooking_time
     - field.field.node.recipe.field_image
@@ -13,7 +14,6 @@ dependencies:
     - field.field.node.recipe.field_recipe_instruction
     - field.field.node.recipe.field_reviews
     - field.field.node.recipe.field_serving_size
-    - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_total_time
     - image.style.extra_large
     - node.type.recipe
@@ -29,6 +29,13 @@ targetEntityType: node
 bundle: recipe
 mode: default
 content:
+  body:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_calories:
     weight: 5
     label: above
@@ -39,7 +46,7 @@ content:
     type: number_integer
     region: content
   field_cooking_time:
-    weight: 10
+    weight: 9
     label: above
     settings:
       text_length: full
@@ -57,7 +64,7 @@ content:
     type: image
     region: content
   field_ingredients:
-    weight: 7
+    weight: 6
     label: above
     settings:
       link_to_entity: false
@@ -74,7 +81,7 @@ content:
     type: number_integer
     region: content
   field_preparation_time:
-    weight: 9
+    weight: 8
     label: above
     settings:
       text_length: full
@@ -91,14 +98,14 @@ content:
     type: entity_reference_label
     region: content
   field_recipe_instruction:
-    weight: 8
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_reviews:
-    weight: 12
+    weight: 11
     label: above
     settings:
       link: true
@@ -113,15 +120,8 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_summary:
-    weight: 6
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_total_time:
-    weight: 11
+    weight: 10
     label: above
     settings:
       text_length: full

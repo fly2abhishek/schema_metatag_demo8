@@ -1,0 +1,23 @@
+uuid: d5e2f291-e52a-4b25-961c-bccb91e544d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.book
+  module:
+    - options
+id: node.book.field_country
+field_name: field_country
+entity_type: node
+bundle: book
+label: Country
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: us
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -13,7 +13,7 @@ entity_type: node
 bundle: tv_show
 label: 'Social Links'
 description: ''
-required: true
+required: false
 translatable: true
 default_value:
   -

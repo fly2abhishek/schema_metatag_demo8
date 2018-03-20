@@ -4,6 +4,7 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.full
+    - field.field.node.recipe.body
     - field.field.node.recipe.field_calories
     - field.field.node.recipe.field_cooking_time
     - field.field.node.recipe.field_image
@@ -12,8 +13,8 @@ dependencies:
     - field.field.node.recipe.field_preparation_time
     - field.field.node.recipe.field_recipe_category
     - field.field.node.recipe.field_recipe_instruction
+    - field.field.node.recipe.field_reviews
     - field.field.node.recipe.field_serving_size
-    - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_total_time
     - node.type.recipe
   module:
@@ -67,21 +68,16 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_summary:
-    weight: 9
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   field_calories: true
   field_cooking_time: true
   field_preparation_time: true
+  field_reviews: true
   field_serving_size: true
   field_total_time: true

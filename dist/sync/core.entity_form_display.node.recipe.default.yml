@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.recipe.body
     - field.field.node.recipe.field_calories
     - field.field.node.recipe.field_cooking_time
     - field.field.node.recipe.field_image
@@ -13,7 +14,6 @@ dependencies:
     - field.field.node.recipe.field_recipe_instruction
     - field.field.node.recipe.field_reviews
     - field.field.node.recipe.field_serving_size
-    - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_total_time
     - image.style.thumbnail
     - node.type.recipe
@@ -29,28 +29,37 @@ targetEntityType: node
 bundle: recipe
 mode: default
 content:
+  body:
+    weight: 18
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
   created:
     type: datetime_timestamp
-    weight: 12
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   field_calories:
-    weight: 18
+    weight: 13
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_cooking_time:
-    weight: 26
+    weight: 14
     settings:
       duration: ''
     third_party_settings: {  }
     type: duration_widget
     region: content
   field_image:
-    weight: 7
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -58,7 +67,7 @@ content:
     type: image_image
     region: content
   field_ingredients:
-    weight: 9
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -66,21 +75,21 @@ content:
     type: string_textfield
     region: content
   field_number_of_servings:
-    weight: 4
+    weight: 1
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_preparation_time:
-    weight: 27
+    weight: 15
     settings:
       duration: ''
     third_party_settings: {  }
     type: duration_widget
     region: content
   field_recipe_category:
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -89,7 +98,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_recipe_instruction:
-    weight: 10
+    weight: 5
     settings:
       rows: 5
       placeholder: ''
@@ -97,29 +106,21 @@ content:
     type: text_textarea
     region: content
   field_reviews:
-    weight: 29
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_serving_size:
-    weight: 17
+    weight: 12
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_summary:
-    weight: 8
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_total_time:
-    weight: 28
+    weight: 16
     settings:
       duration: ''
     third_party_settings: {  }
@@ -127,7 +128,7 @@ content:
     region: content
   path:
     type: path
-    weight: 15
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -135,21 +136,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 8
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 11
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 9
     region: content
     third_party_settings: {  }
   title:
@@ -162,7 +163,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 11
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60

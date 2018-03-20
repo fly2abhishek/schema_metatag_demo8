@@ -23,19 +23,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
   field_country:
-    weight: 104
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_image:
-    weight: 102
+    weight: 0
     label: above
     settings:
       image_style: extra_large
@@ -44,7 +44,7 @@ content:
     type: image
     region: content
   field_price:
-    weight: 103
+    weight: 1
     label: above
     settings:
       thousand_separator: ''
@@ -55,7 +55,7 @@ content:
     type: number_decimal
     region: content
   field_reviews:
-    weight: 105
+    weight: 3
     label: above
     settings:
       link: true
@@ -63,7 +63,7 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 100
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

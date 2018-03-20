@@ -1,25 +1,26 @@
-uuid: 5689006b-594e-4e35-aa9c-61323486dc93
+uuid: 92c3dc0e-cc8a-4ce2-a4db-e28bbcd99f8c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_children
-    - node.type.book
-id: node.book.field_children
-field_name: field_children
+    - field.storage.node.field_clip
+    - node.type.clip
+    - node.type.tv_show
+id: node.tv_show.field_clip
+field_name: field_clip
 entity_type: node
-bundle: book
-label: Children
-description: 'Editions, printings, examples of this book.'
+bundle: tv_show
+label: Clip
+description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      book: book
+      clip: clip
     sort:
       field: _none
     auto_create: false

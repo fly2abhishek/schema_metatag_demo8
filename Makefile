@@ -17,8 +17,10 @@ DRUPAL_PROFILE_SETTINGS= --account-pass=admin --site-name='Demo Drupal 8 Site'
 # createfromconfig:
 CONFIG_SOURCE=${REPO_ROOT}/dist/sync/
 # createfromdump:
-DB_SOURCE=https://www.dropbox.com/s/ji41n0q14qgky9a/demo-drupal8-database.sql.gz?dl=0
-FILE_SOURCE=https://www.dropbox.com/s/jveuu586eb49kho/demo-drupal8-files.tar.gz?dl=0
+#DB_SOURCE=https://www.dropbox.com/s/ji41n0q14qgky9a/demo-drupal8-database.sql.gz?dl=0
+DB_SOURCE=https://www.dropbox.com/s/hgrh1dbjz47174d/2018-03-20.sql.gz.gz?dl=0
+#FILE_SOURCE=https://www.dropbox.com/s/jveuu586eb49kho/demo-drupal8-files.tar.gz?dl=0
+FILE_SOURCE=https://www.dropbox.com/s/z168vqbe2sadjc2/files.tar.gz?dl=0
 
 packageinstallation:
 	# Replace PHP 7.0 with PHP 7.1.
@@ -110,6 +112,6 @@ cleanup:
 
 # Swap in the desired method of creating the site:
 # createfromdump, createfromprofile, or createfromconfig.
-tugboat-init: packageinstallation drupalsetup createfromconfig build cleanup
-tugboat-update: createfromconfig build cleanup
+tugboat-init: packageinstallation drupalsetup createfromdump build cleanup
+tugboat-update: createfromdump build cleanup
 tugboat-build: build

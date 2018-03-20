@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.tv_show.body
     - field.field.node.tv_show.field_actor
+    - field.field.node.tv_show.field_clip
     - field.field.node.tv_show.field_director
     - field.field.node.tv_show.field_event
     - field.field.node.tv_show.field_image
@@ -25,12 +26,20 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 5
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     region: content
   field_actor:
-    weight: 3
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_clip:
+    weight: 1
     label: above
     settings:
       link: true
@@ -38,7 +47,7 @@ content:
     type: entity_reference_label
     region: content
   field_director:
-    weight: 2
+    weight: 3
     label: above
     settings:
       link: true
@@ -46,7 +55,7 @@ content:
     type: entity_reference_label
     region: content
   field_event:
-    weight: 4
+    weight: 5
     label: above
     settings:
       link: true
@@ -63,7 +72,7 @@ content:
     type: image
     region: content
   field_reviews:
-    weight: 7
+    weight: 6
     label: above
     settings:
       link: true
@@ -71,7 +80,7 @@ content:
     type: entity_reference_label
     region: content
   field_social_links:
-    weight: 1
+    weight: 2
     label: above
     settings:
       trim_length: 80
@@ -83,7 +92,7 @@ content:
     type: link
     region: content
   links:
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,19 @@
+uuid: 9cd60ac7-3fe5-4f05-a998-8b939e3a2d6a
+langcode: en
+status: true
+dependencies: {  }
+id: node__tv_show
+label: 'Content: TV Show'
+tags:
+  schema_movie_same_as: '[node:field_social_links]'
+  schema_movie_director: 'a:4:{s:5:"pivot";s:1:"1";s:5:"@type";s:6:"Person";s:4:"name";s:21:"[node:field_director]";s:6:"sameAs";s:69:"[node:field_director:0:entity:url],[node:field_director:1:entity:url]";}'
+  schema_movie_url: '[node:url]'
+  schema_movie_name: '[node:title]'
+  schema_movie_image: 'a:5:{s:5:"@type";s:11:"ImageObject";s:20:"representativeOfPage";s:4:"True";s:3:"url";s:28:"[node:field_image:large:url]";s:5:"width";s:30:"[node:field_image:large:width]";s:6:"height";s:31:"[node:field_image:large:height]";}'
+  schema_movie_date_created: '[node:created:html_datetime]'
+  schema_movie_actor: 'a:4:{s:5:"pivot";s:1:"1";s:5:"@type";s:6:"Person";s:4:"name";s:18:"[node:field_actor]";s:6:"sameAs";s:63:"[node:field_actor:0:entity:url],[node:field_actor:1:entity:url]";}'
+  schema_movie_has_part: 'a:4:{s:5:"@type";s:6:"TVClip";s:4:"name";s:17:"[node:field_clip]";s:12:"timeRequired";s:33:"[node:field_clip:entity:duration]";s:15:"potentialAction";a:3:{s:5:"@type";s:11:"WatchAction";s:6:"target";a:4:{s:5:"@type";s:10:"EntryPoint";s:11:"urlTemplate";s:34:"[node:field_clip:entity:url]?watch";s:14:"actionPlatform";s:73:"http://schema.org/DesktopWebPlatform, http://schema.org/MobileWebPlatform";s:10:"inLanguage";s:5:"en-US";}s:19:"expectsAcceptanceOf";a:5:{s:5:"@type";s:5:"Offer";s:18:"availabilityStarts";s:60:"[node:field_clip:entity:field_start_date:date:html_datetime]";s:16:"availabilityEnds";s:58:"[node:field_clip:entity:field_end_date:date:html_datetime]";s:8:"category";s:39:"[node:field_clip:entity:field_category]";s:14:"eligibleRegion";a:2:{s:5:"@type";s:7:"Country";s:4:"name";s:38:"[node:field_clip:entity:field_country]";}}}}'
+  schema_movie_released_event: 'a:5:{s:5:"@type";s:16:"PublicationEvent";s:4:"name";s:18:"[node:field_event]";s:3:"url";s:29:"[node:field_event:entity:url]";s:9:"startDate";s:55:"[node:field_event:entity:field_date:date:html_datetime]";s:8:"location";a:2:{s:5:"@type";s:5:"Place";s:7:"address";a:6:{s:5:"@type";s:13:"PostalAddress";s:13:"streetAddress";s:53:"[node:field_event:entity:field_address:address_line1]";s:15:"addressLocality";s:48:"[node:field_event:entity:field_address:locality]";s:13:"addressRegion";s:59:"[node:field_event:entity:field_address:administrative_area]";s:10:"postalCode";s:51:"[node:field_event:entity:field_address:postal_code]";s:14:"addressCountry";s:52:"[node:field_event:entity:field_address:country_code]";}}}'
+  schema_movie_description: '[node:summary]'
+  schema_movie_type: TVSeries
+  schema_movie_id: '[node:url]'

@@ -1,18 +1,18 @@
-uuid: 0fabc80b-90a8-444f-ad68-8f02489e404e
+uuid: 87be01ee-7773-44dd-a0e0-ab64cc8a890e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_director
-    - node.type.tv_show
-id: node.tv_show.field_director
-field_name: field_director
+    - field.storage.node.field_actor
+    - node.type.tv_season
+id: node.tv_season.field_actor
+field_name: field_actor
 entity_type: node
-bundle: tv_show
-label: Director
+bundle: tv_season
+label: Actor
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

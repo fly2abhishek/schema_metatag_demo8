@@ -15,7 +15,17 @@ label: 'Social Links'
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://imbd.com'
+    title: IMDB
+    options: {  }
+  -
+    attributes: {  }
+    uri: 'https://facebook.com'
+    title: Facebook
+    options: {  }
 default_value_callback: ''
 settings:
   link_type: 16

@@ -6,11 +6,12 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.tv_episode.body
     - field.field.node.tv_episode.field_actor
+    - field.field.node.tv_episode.field_clip
     - field.field.node.tv_episode.field_country
     - field.field.node.tv_episode.field_episode_number
     - field.field.node.tv_episode.field_image
+    - field.field.node.tv_episode.field_reviews
     - field.field.node.tv_episode.field_social_links
-    - field.field.node.tv_episode.field_total_time
     - field.field.node.tv_episode.field_tvseason
     - field.field.node.tv_episode.field_tvshow
     - image.style.medium
@@ -65,6 +66,7 @@ content:
 hidden:
   body: true
   field_actor: true
+  field_clip: true
   field_country: true
+  field_reviews: true
   field_social_links: true
-  field_total_time: true

@@ -9,17 +9,27 @@ dependencies:
     - field.field.node.tv_show.field_director
     - field.field.node.tv_show.field_event
     - field.field.node.tv_show.field_image
+    - field.field.node.tv_show.field_reviews
     - field.field.node.tv_show.field_social_links
     - image.style.medium
     - node.type.tv_show
   module:
     - image
+    - text
     - user
 id: node.tv_show.teaser
 targetEntityType: node
 bundle: tv_show
 mode: teaser
 content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
   field_image:
     type: image
     weight: 0
@@ -30,13 +40,13 @@ content:
       image_link: content
     third_party_settings: {  }
   links:
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  body: true
   field_actor: true
   field_director: true
   field_event: true
+  field_reviews: true
   field_social_links: true

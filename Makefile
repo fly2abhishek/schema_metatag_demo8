@@ -86,7 +86,7 @@ createfromdump:
 	curl -L ${DB_SOURCE} > /tmp/database.sql.gz
 	zcat /tmp/database.sql.gz | mysql -h mysql -u tugboat -ptugboat tugboat
 	curl -L ${FILE_SOURCE} > /tmp/files.tar.gz
-	tar -C /tmp -zxf /tmp/files.tar.gz
+	tar -C /tmp/files -zxf /tmp/files.tar.gz
 	rsync -av --delete /tmp/files/ ${CONTAINER_ROOT}/${FILES_DIR}/
 
 createfromprofile:

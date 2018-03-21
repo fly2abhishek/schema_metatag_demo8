@@ -86,8 +86,9 @@ createfromdump:
 	curl -L ${DB_SOURCE} > /tmp/database.sql.gz
 	zcat /tmp/database.sql.gz | mysql -h mysql -u tugboat -ptugboat tugboat
 	curl -L ${FILE_SOURCE} > /tmp/files.tar.gz
+	mkdir /tmp/files
 	tar -C /tmp/files -zxf /tmp/files.tar.gz
-	rsync -av --delete /tmp/files/ ${CONTAINER_ROOT}/${FILES_DIR}/
+	rsync -av --delete /tmp/files/ ${CONTAINER_ROOT}/${FILES_DIR}
 
 createfromprofile:
 	# Create vanilla Tugboat site from a profile.

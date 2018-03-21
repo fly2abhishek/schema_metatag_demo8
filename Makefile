@@ -12,14 +12,12 @@ CONFIG_DIR=${SITE_DIR}/sync
 
 # Set the site creation method in tugboat-init, tugboat-update, and tugboat-build:
 # createfromprofile:
-DRUPAL_PROFILE=demo_umami
+DRUPAL_PROFILE=standard
 DRUPAL_PROFILE_SETTINGS= --account-pass=admin --site-name='Demo Drupal 8 Site'
 # createfromconfig:
 CONFIG_SOURCE=${REPO_ROOT}/dist/sync/
 # createfromdump:
-#DB_SOURCE=https://www.dropbox.com/s/ji41n0q14qgky9a/demo-drupal8-database.sql.gz?dl=0
 DB_SOURCE=https://www.dropbox.com/s/hgrh1dbjz47174d/2018-03-20.sql.gz.gz?dl=0
-#FILE_SOURCE=https://www.dropbox.com/s/jveuu586eb49kho/demo-drupal8-files.tar.gz?dl=0
 FILE_SOURCE=https://www.dropbox.com/s/z168vqbe2sadjc2/files.tar.gz?dl=0
 
 packageinstallation:
@@ -76,9 +74,12 @@ drupalsetup:
 	echo "\$$settings['hash_salt'] = '$$(openssl rand -hex 32)';" >> ${CONTAINER_ROOT}/${SITE_DIR}/settings.local.php
 	echo "\$$config_directories['sync'] = '${CONFIG_DIR}';" >> ${CONTAINER_ROOT}/${SITE_DIR}/settings.local.php
 	mkdir -p ${DRUPAL_ROOT}/${FILES_DIR}
+	mkdir -p ${DRUPAL_ROOT}/${CONFIG_DIR}
 	chgrp -R www-data ${DRUPAL_ROOT}/${SITE_DIR}
 	chmod -R g+w ${DRUPAL_ROOT}/${FILES_DIR}
 	chmod 2775 ${DRUPAL_ROOT}/${FILES_DIR}
+	chmod -R g+w ${DRUPAL_ROOT}/${CONFIG_DIR}
+	chmod 2775 ${DRUPAL_ROOT}/${CONFIG_DIR}
 	mysql -h mysql -u tugboat -ptugboat -e "create database tugboat;"
 
 createfromdump:
@@ -91,8 +92,7 @@ createfromdump:
 	rsync -av --delete /tmp/files/ ${CONTAINER_ROOT}/${FILES_DIR}
 
 createfromprofile:
-	# Create vanilla Tugboat site from a profile.
-	# You can use core's demo_umami profile instead of standard profile.
+	# Create empty Tugboat site from a profile.
 	cd ${DRUPAL_ROOT}
 	drush site-install ${DRUPAL_PROFILE} ${DRUPAL_PROFILE_SETTINGS} -y
 

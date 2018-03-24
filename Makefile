@@ -17,7 +17,7 @@ DRUPAL_PROFILE_SETTINGS= --account-pass=admin --site-name='Demo Drupal 8 Site'
 # createfromconfig:
 CONFIG_SOURCE=${REPO_ROOT}/dist/sync/
 # createfromdump:
-DB_SOURCE=https://www.dropbox.com/s/hgrh1dbjz47174d/2018-03-20.sql.gz.gz?dl=0
+DB_SOURCE=https://www.dropbox.com/s/yop3otj9rrd8it8/2018-03-24.sql.zip?dl=0
 FILE_SOURCE=https://www.dropbox.com/s/z168vqbe2sadjc2/files.tar.gz?dl=0
 
 packageinstallation:

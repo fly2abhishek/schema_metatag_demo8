@@ -32,7 +32,7 @@
         "drupal/duration_field": "^1.1",
         "drupal/metatag": "^1.4",
         "drupal/pathauto": "^1.1",
-        "drupal/schema_metatag": "1.x-dev",
+        "drupal/schema_metatag": "^1.0",
         "drush/drush": "^9.0.0",
         "karens/basis_drupal": "8.0.x-dev",
         "webflo/drupal-finder": "^1.0.0",

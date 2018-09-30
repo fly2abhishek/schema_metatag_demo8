@@ -1,0 +1,103 @@
+services:
+
+  # What to call the service hosting the site.
+  php:
+    http: false
+
+    # Use PHP 7.2 with Apache
+    image: tugboatqa/php:7.2-apache
+
+    # Set this as the default service. This does a few things
+    #   1. Clones the git repository into the service container
+    #   2. Exposes port 80 to the Tugboat HTTP proxy
+    #   3. Routes requests to the preview URL to this service
+    default: true
+
+    # Wait until the mysql service is done building
+    depends: mysql
+
+    # A set of commands to run while building this service
+    commands:
+
+      # Commands that set up the basic preview infrastructure
+      init: |
+        set -euxo pipefail
+        # Install prerequisite packages
+        apt-get update
+        apt-get install -y mysql-client
+
+        # Install drush-launcher
+        wget -O /usr/local/bin/drush https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar
+        chmod +x /usr/local/bin/drush
+
+        # Link the document root to the expected path. Tugboat uses /docroot
+        # by default. So, if Drupal is located at any other path in your git
+        # repository, change that here. This example links /web to the docroot
+        ln -snf "${TUGBOAT_ROOT}/web" "${DOCROOT}"
+
+        docker-php-ext-install opcache
+        a2enmod headers rewrite
+
+      # Commands that import files, databases,  or other assets. When an
+      # existing preview is refreshed, the build workflow starts here,
+      # skipping the init step, because the results of that step will
+      # already be present.
+      update: |
+        set -euxo pipefail
+        # Use the tugboat-specific Drupal settings
+        cp "${TUGBOAT_ROOT}/.tugboat/settings.local.php" "${DOCROOT}/sites/default"
+
+        # Install/update packages managed by composer, including drush
+        composer install --optimize-autoloader
+
+        # Create the private files directory.
+        mkdir -p $DOCROOT/../files/private
+
+        # Set up permissions for the files directories.
+        chgrp -R www-data "${DOCROOT}/sites/default/files" "${DOCROOT}/../files/private"
+        chmod -R g+w "${DOCROOT}/sites/default/files" "${DOCROOT}/../files/private"
+        chmod 2775 "${DOCROOT}/sites/default/files" "${DOCROOT}/../files/private"
+
+        rsync \
+          -av \
+          --no-o --no-p \
+          --delete \
+          "https://www.dropbox.com/s/dl/z168vqbe2sadjc2/files.tar.gz" \
+          "${DOCROOT}/sites/default/files"
+
+      # Commands that build the site. This is where you would add things
+      # like feature reverts or any other drush commands required to
+      # set up or configure the site. When a preview is built from a
+      # base preview, the build workflow starts here, skipping the init
+      # and update steps, because the results of those are inherited
+      # from the base preview.
+      build: |
+        set -euxo pipefail
+        # Install/update packages managed by composer, including drush
+        composer install --no-ansi --optimize-autoloader
+        drush -r "${DOCROOT}" cim -y
+        drush -r "${DOCROOT}" cache-rebuild
+        drush -r "${DOCROOT}" updb -y
+        drush -r "${DOCROOT}" en stage_file_proxy -y
+
+  # What to call the service hosting MySQL. This name also acts as the
+  # hostname to access the service by from the php service.
+  mysql:
+
+    # Use the latest available 5.x version of MySQL
+    image: tugboatqa/mysql:5
+
+    # A set of commands to run while building this service
+    commands:
+
+      # Commands that import files, databases,  or other assets. When an
+      # existing preview is refreshed, the build workflow starts here,
+      # skipping the init step, because the results of that step will
+      # already be present.
+      update:
+
+        # Copy a database dump from an external server.
+        #- wget -O /tmp/database.sql.gz https://www.dropbox.com/s/dl/s9raaaxedkunx2e/db8.backup.2018-09-16T10%3A46%3A51CDT.sql.gz
+        - wget -O /tmp/database.sql.gz https://www.dropbox.com/s/dl/wk6bxrsm5t68s3b/schema8-2018-09-30.gz
+        - zcat /tmp/database.sql.gz | mysql tugboat
+        - rm /tmp/database.sql.gz

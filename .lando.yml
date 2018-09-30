@@ -1,0 +1,22 @@
+name: schema8
+recipe: drupal8
+config:
+  webroot: web
+  php: '7.2'
+  drush: composer
+services:
+  appserver:
+    xdebug: true
+    config:
+      conf: config/php.ini
+  database:
+    type: mariadb
+  database7:
+    type: mariadb
+    creds:
+      user: drupal7
+      password: drupal7
+      database: drupal7
+proxy:
+  appserver:
+    - local.schema8.com

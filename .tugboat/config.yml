@@ -58,12 +58,7 @@ services:
         chmod -R g+w "${DOCROOT}/sites/default/files" "${DOCROOT}/../files/private"
         chmod 2775 "${DOCROOT}/sites/default/files" "${DOCROOT}/../files/private"
 
-        rsync \
-          -av \
-          --no-o --no-p \
-          --delete \
-          "https://www.dropbox.com/s/dl/dngaqpd24pgxfrr/schema8files.gz" \
-          "${DOCROOT}/sites/default/files"
+        wget -c https://www.dropbox.com/s/dl/dngaqpd24pgxfrr/schema8files.gz -O - | sudo tar -xz -C ${DOCROOT}/sites/default/files/
 
       # Commands that build the site. This is where you would add things
       # like feature reverts or any other drush commands required to

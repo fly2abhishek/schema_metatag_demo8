@@ -62,7 +62,7 @@ services:
           -av \
           --no-o --no-p \
           --delete \
-          "https://www.dropbox.com/s/dl/z168vqbe2sadjc2/files.tar.gz" \
+          "https://www.dropbox.com/s/dl/dngaqpd24pgxfrr/schema8files.gz" \
           "${DOCROOT}/sites/default/files"
 
       # Commands that build the site. This is where you would add things

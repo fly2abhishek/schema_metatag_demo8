@@ -11,9 +11,3 @@ services:
       conf: config/php.ini
   database:
     type: mariadb
-  database7:
-    type: mariadb
-    creds:
-      user: drupal7
-      password: drupal7
-      database: drupal7

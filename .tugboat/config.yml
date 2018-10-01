@@ -59,7 +59,7 @@ services:
         chmod 2775 "${DOCROOT}/sites/default/files" "${DOCROOT}/../files/private"
 
         wget -O /tmp/files.gz https://www.dropbox.com/s/dl/dngaqpd24pgxfrr/schema8files.gz
-        tar -xzf /tmp/files.gz -C ${DOCROOT}/sites/default/files
+        tar -xzf /tmp/files.gz -C ${DOCROOT}/sites/default
 
       # Commands that build the site. This is where you would add things
       # like feature reverts or any other drush commands required to

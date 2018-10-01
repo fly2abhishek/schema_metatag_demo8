@@ -98,6 +98,7 @@ services:
 
         # Copy a database dump from an external server.
         #- wget -O /tmp/database.sql.gz https://www.dropbox.com/s/dl/s9raaaxedkunx2e/db8.backup.2018-09-16T10%3A46%3A51CDT.sql.gz
-        - wget -O /tmp/database.sql.gz https://www.dropbox.com/s/dl/wk6bxrsm5t68s3b/schema8-2018-09-30.gz
+        #- wget -O /tmp/database.sql.gz https://www.dropbox.com/s/dl/wk6bxrsm5t68s3b/schema8-2018-09-30.gz
+        - wget -O /tmp/database.sql.gz https://www.dropbox.com/s/dl/lhz8tst3cjgy63u/schema8.gz
         - zcat /tmp/database.sql.gz | mysql tugboat
         - rm /tmp/database.sql.gz

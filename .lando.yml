@@ -17,6 +17,3 @@ services:
       user: drupal7
       password: drupal7
       database: drupal7
-proxy:
-  appserver:
-    - local.schema8.com

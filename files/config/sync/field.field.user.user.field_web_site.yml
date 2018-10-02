@@ -1,0 +1,23 @@
+uuid: ca55483a-2fd8-4084-9158-fa90494239aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_web_site
+  module:
+    - link
+    - user
+id: user.user.field_web_site
+field_name: field_web_site
+entity_type: user
+bundle: user
+label: 'Web site'
+description: 'Personal web site.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

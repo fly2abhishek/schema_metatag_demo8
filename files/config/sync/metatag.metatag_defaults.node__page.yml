@@ -1,0 +1,11 @@
+uuid: 16c4f4c3-42e2-48cc-b4fd-999461a424bd
+langcode: en
+status: true
+dependencies: {  }
+id: node__page
+label: 'Content: Page'
+tags:
+  schema_web_page_type: WebPage
+  schema_web_page_breadcrumb: 'Yes'
+  schema_web_page_description: '[node:summary]'
+  schema_web_page_id: '[current-page:url]'

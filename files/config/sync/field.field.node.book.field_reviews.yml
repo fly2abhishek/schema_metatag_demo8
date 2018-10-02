@@ -1,0 +1,28 @@
+uuid: a3f6cbff-9056-46ce-a524-9df826afe4ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reviews
+    - node.type.book
+    - node.type.review
+id: node.book.field_reviews
+field_name: field_reviews
+entity_type: node
+bundle: book
+label: Reviews
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      review: review
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

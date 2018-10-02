@@ -1,0 +1,22 @@
+uuid: ffe03b95-f76f-442a-b944-8187ade54923
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: vIbtYm5A0Me6sYanGVN3UfhcySCmGnTGGJtY3xmJhyI
+id: node.field_number_of_servings
+field_name: field_number_of_servings
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

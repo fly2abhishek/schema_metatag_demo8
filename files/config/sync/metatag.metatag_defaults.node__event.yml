@@ -1,0 +1,17 @@
+uuid: 62a843f7-c209-434d-8eca-3d382bb0965e
+langcode: en
+status: true
+dependencies: {  }
+id: node__event
+label: 'Content: Event'
+tags:
+  schema_event_url: '[node:url]'
+  schema_event_name: '[node:title]'
+  schema_event_performer: 'a:3:{s:5:"pivot";s:1:"1";s:5:"@type";s:6:"Person";s:4:"name";s:18:"[node:field_actor]";}'
+  schema_event_image: 'a:4:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:36:"[node:field_image:entity:larget:url]";s:5:"width";s:37:"[node:field_image:entity:large:width]";s:6:"height";s:38:"[node:field_image:entity:large:height]";}'
+  schema_event_type: Event
+  schema_event_start_date: '[node:field_start_date]'
+  schema_event_end_date: '[node:field_end_date]'
+  schema_event_offers: 'a:5:{s:5:"@type";s:5:"Offer";s:5:"price";s:18:"[node:field_price]";s:13:"priceCurrency";s:3:"USD";s:3:"url";s:10:"[node:url]";s:14:"eligibleRegion";a:2:{s:5:"@type";s:7:"Country";s:4:"name";s:33:"[node:field_address:country_code]";}}'
+  schema_event_location: 'a:2:{s:5:"@type";s:5:"Place";s:7:"address";a:6:{s:5:"@type";s:13:"PostalAddress";s:13:"streetAddress";s:34:"[node:field_address:address_line1]";s:15:"addressLocality";s:29:"[node:field_address:locality]";s:13:"addressRegion";s:40:"[node:field_address:administrative_area]";s:10:"postalCode";s:32:"[node:field_address:postal_code]";s:14:"addressCountry";s:33:"[node:field_address:country_code]";}}'
+  schema_event_description: '[node:summary]'

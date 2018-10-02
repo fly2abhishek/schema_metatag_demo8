@@ -1,0 +1,17 @@
+uuid: 482e7dc8-5491-488c-8761-223db4247d30
+langcode: en
+status: true
+dependencies: {  }
+id: node__job_posting
+label: 'Content: Job Posting'
+tags:
+  schema_job_posting_identifier: '[node:nid]'
+  schema_job_posting_description: '[node:summary]'
+  schema_job_posting_hiring_organization: 'a:5:{s:5:"@type";s:12:"Organization";s:3:"@id";s:43:"[node:field_hiring_organization:entity:url]";s:4:"name";s:45:"[node:field_hiring_organization:entity:title]";s:3:"url";s:43:"[node:field_hiring_organization:entity:url]";s:6:"sameAs";s:43:"[node:field_hiring_organization:entity:url]";}'
+  schema_job_posting_type: JobPosting
+  schema_job_posting_job_location: 'a:3:{s:5:"@type";s:5:"Place";s:4:"name";s:45:"[node:field_hiring_organization:entity:title]";s:7:"address";a:6:{s:5:"@type";s:13:"PostalAddress";s:13:"streetAddress";s:67:"[node:field_hiring_organization:entity:field_address:address_line1]";s:15:"addressLocality";s:62:"[node:field_hiring_organization:entity:field_address:locality]";s:13:"addressRegion";s:73:"[node:field_hiring_organization:entity:field_address:administrative_area]";s:10:"postalCode";s:65:"[node:field_hiring_organization:entity:field_address:postal_code]";s:14:"addressCountry";s:61:"[node:field_hiring_organization:entity:field_address:country]";}}'
+  schema_job_posting_base_salary: 'a:3:{s:5:"@type";s:14:"MonetaryAmount";s:8:"currency";s:3:"USD";s:5:"value";a:5:{s:5:"@type";s:17:"QuantitativeValue";s:5:"value";s:27:"[node:field_minimum_amount]";s:8:"minValue";s:27:"[node:field_minimum_amount]";s:8:"maxValue";s:27:"[node:field_maximum_amount]";s:8:"unitText";s:24:"[node:field_amount_unit]";}}'
+  schema_job_posting_employment_type: '[node:field_job_status]'
+  schema_job_posting_date_posted: '[node:field_start_date:date:html_datetime]'
+  schema_job_posting_title: '[node:title]'
+  schema_job_posting_valid_through: '[node:field_end_date:date:html_datetime]'

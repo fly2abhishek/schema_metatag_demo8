@@ -1,0 +1,31 @@
+uuid: ce63b6d9-c9b6-4ae0-9edc-5436e5da4eb9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f3cb1759-004c-4791-b389-b56e353ccbe2'
+  module:
+    - block_content
+    - system
+  theme:
+    - basis
+id: contentjsonld
+theme: basis
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:f3cb1759-004c-4791-b389-b56e353ccbe2'
+settings:
+  id: 'block_content:f3cb1759-004c-4791-b389-b56e353ccbe2'
+  label: 'JSON-LD Configuration'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node*\r\n/user*"
+    negate: false
+    context_mapping: {  }

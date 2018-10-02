@@ -1,0 +1,48 @@
+uuid: 88f73a45-259c-4883-a524-f42bdca19f04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_item_reviewed
+    - node.type.article
+    - node.type.book
+    - node.type.clip
+    - node.type.event
+    - node.type.organization
+    - node.type.product
+    - node.type.recipe
+    - node.type.review
+    - node.type.service
+    - node.type.tv_episode
+    - node.type.tv_season
+    - node.type.tv_show
+id: node.review.field_item_reviewed
+field_name: field_item_reviewed
+entity_type: node
+bundle: review
+label: 'Item reviewed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      book: book
+      clip: clip
+      event: event
+      organization: organization
+      product: product
+      recipe: recipe
+      service: service
+      tv_episode: tv_episode
+      tv_season: tv_season
+      tv_show: tv_show
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference

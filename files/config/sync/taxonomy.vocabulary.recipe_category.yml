@@ -1,0 +1,11 @@
+uuid: a7c55e5b-1a46-42b8-a907-26eb645a1527
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gAdqVMDTyEFxmdAr5UAm4cOU0_eyifq4XlJxSDUXWhg
+name: 'Recipe category'
+vid: recipe_category
+description: ''
+hierarchy: 0
+weight: 0

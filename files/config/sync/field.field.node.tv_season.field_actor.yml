@@ -1,0 +1,28 @@
+uuid: 87be01ee-7773-44dd-a0e0-ab64cc8a890e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_actor
+    - node.type.tv_season
+id: node.tv_season.field_actor
+field_name: field_actor
+entity_type: node
+bundle: tv_season
+label: Actor
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: d482d5f7-ed14-4974-8c78-4a9238f844ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: d8k0sDVIQVUsBy3kVHadRacXywHXYzh9Kc_rKTNitfQ
+name: Recipe
+type: recipe
+description: 'A recipe.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

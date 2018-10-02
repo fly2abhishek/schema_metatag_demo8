@@ -1,0 +1,78 @@
+uuid: 9a95201f-5491-420d-8ee9-09d66739fc6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.book.body
+    - field.field.node.book.field_author
+    - field.field.node.book.field_availability
+    - field.field.node.book.field_country
+    - field.field.node.book.field_date_published
+    - field.field.node.book.field_edition
+    - field.field.node.book.field_format
+    - field.field.node.book.field_image
+    - field.field.node.book.field_isbn
+    - field.field.node.book.field_price
+    - field.field.node.book.field_reviews
+    - field.field.node.book.field_social_links
+    - image.style.medium
+    - node.type.book
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.book.teaser
+targetEntityType: node
+bundle: book
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 3
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_author:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_date_published:
+    type: datetime_default
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: short
+    third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+  links:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_availability: true
+  field_country: true
+  field_edition: true
+  field_format: true
+  field_isbn: true
+  field_price: true
+  field_reviews: true
+  field_social_links: true

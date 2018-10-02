@@ -1,0 +1,18 @@
+uuid: 7dbda537-c266-45d7-9d2b-5309e663369b
+langcode: en
+status: true
+dependencies: {  }
+id: node__clip
+label: 'Content: Clip'
+tags:
+  schema_video_object_thumbnail_url: '[node:field_image:entity:url]'
+  schema_video_object_description: '[node:summary]'
+  schema_video_object_name: '[node:title]'
+  schema_video_object_content_url: '[node:field_url:uri]'
+  schema_video_object_upload_date: '[node:created:html_datetime]'
+  schema_video_object_embed_url: '[node:field_embed_url:uri]'
+  schema_video_object_duration: '[node:field_duration:value]'
+  schema_video_object_id: '[node:url]'
+  schema_video_object_type: VideoObject
+  schema_video_object_interaction_count: '[node:field_times_watched]'
+  schema_video_object_expires: '[node:field_end_date:date:html_datetime]'

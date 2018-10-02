@@ -1,0 +1,21 @@
+uuid: 5051d2a7-e6b6-480c-9c6d-dab71c2bae5d
+langcode: en
+status: true
+dependencies: {  }
+id: node__article
+label: 'Content: Article'
+tags:
+  schema_article_date_modified: '[node:changed:html_datetime]'
+  schema_article_type: NewsArticle
+  schema_article_has_part: 'a:3:{s:5:"@type";s:14:"WebPageElement";s:19:"isAccessibleForFree";s:5:"False";s:11:"cssSelector";s:19:".paywall1,.paywall2";}'
+  schema_article_is_accessible_for_free: 'False'
+  schema_article_review: 'a:6:{s:5:"pivot";s:1:"1";s:5:"@type";s:6:"Review";s:10:"reviewBody";s:75:"[node:field_reviews:0:entity:summary],[node:field_reviews:1:entity:summary]";s:13:"datePublished";s:103:"[node:field_reviews:0:entity:created:html_datetime],[node:field_reviews:1:entity:created:html_datetime]";s:6:"author";a:3:{s:5:"pivot";s:1:"1";s:5:"@type";s:6:"Person";s:4:"name";s:99:"[node:field_reviews:0:entity:author:display-name],[node:field_reviews:1:entity:author:display-name]";}s:12:"reviewRating";a:4:{s:5:"pivot";s:1:"1";s:5:"@type";s:6:"Rating";s:11:"ratingValue";s:85:"[node:field_reviews:0:entity:field_rating],[node:field_reviews:1:entity:field_rating]";s:10:"bestRating";s:1:"5";}}'
+  schema_article_main_entity_of_page: '[current-page:url]'
+  schema_article_image: 'a:5:{s:5:"@type";s:11:"ImageObject";s:20:"representativeOfPage";s:4:"True";s:3:"url";s:29:"[node:field_image:medium:uri]";s:5:"width";s:31:"[node:field_image:medium:width]";s:6:"height";s:32:"[node:field_image:medium:height]";}'
+  schema_article_headline: '[node:title]'
+  schema_article_publisher: 'a:4:{s:5:"@type";s:12:"Organization";s:4:"name";s:11:"[site:name]";s:3:"url";s:10:"[site:url]";s:4:"logo";a:4:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:35:"sites/default/files/square-logo.png";s:5:"width";s:3:"100";s:6:"height";s:2:"93";}}'
+  schema_article_about: '[node:field_tags]'
+  schema_article_name: '[node:title]'
+  schema_article_description: '[node:summary]'
+  schema_article_date_published: '[node:created:html_datetime]'
+  schema_article_author: 'a:3:{s:5:"@type";s:6:"Person";s:4:"name";s:26:"[node:author:display_name]";s:3:"url";s:17:"[node:author:url]";}'

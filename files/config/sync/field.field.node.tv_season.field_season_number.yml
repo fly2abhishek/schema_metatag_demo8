@@ -1,0 +1,25 @@
+uuid: a0957230-3b62-45c3-882b-b1d555b7e588
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_season_number
+    - node.type.tv_season
+id: node.tv_season.field_season_number
+field_name: field_season_number
+entity_type: node
+bundle: tv_season
+label: 'Season Number'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

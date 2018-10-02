@@ -1,0 +1,22 @@
+uuid: 712f9f07-8d5c-4a37-b4f7-13e2d81ca250
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.clip
+  module:
+    - text
+id: node.clip.body
+field_name: body
+entity_type: node
+bundle: clip
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

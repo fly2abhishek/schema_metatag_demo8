@@ -1,0 +1,21 @@
+uuid: ef9dfca6-e068-432f-8513-f38f2aa87283
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_actor
+    - node.type.tv_show
+id: node.tv_show.field_actor
+field_name: field_actor
+entity_type: node
+bundle: tv_show
+label: Actor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

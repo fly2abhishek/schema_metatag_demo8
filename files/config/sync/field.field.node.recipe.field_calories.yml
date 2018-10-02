@@ -1,0 +1,23 @@
+uuid: 403e8ec6-fbff-43dd-9963-5d4e274acbbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_calories
+    - node.type.recipe
+id: node.recipe.field_calories
+field_name: field_calories
+entity_type: node
+bundle: recipe
+label: Calories
+description: 'The calories in one serving.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' calories'
+field_type: integer

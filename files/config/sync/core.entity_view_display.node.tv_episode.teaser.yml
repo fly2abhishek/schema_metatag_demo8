@@ -1,0 +1,72 @@
+uuid: a781b414-511d-495b-a0c8-d4c89ef6365d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tv_episode.body
+    - field.field.node.tv_episode.field_actor
+    - field.field.node.tv_episode.field_clip
+    - field.field.node.tv_episode.field_country
+    - field.field.node.tv_episode.field_episode_number
+    - field.field.node.tv_episode.field_image
+    - field.field.node.tv_episode.field_reviews
+    - field.field.node.tv_episode.field_social_links
+    - field.field.node.tv_episode.field_tvseason
+    - field.field.node.tv_episode.field_tvshow
+    - image.style.medium
+    - node.type.tv_episode
+  module:
+    - image
+    - user
+id: node.tv_episode.teaser
+targetEntityType: node
+bundle: tv_episode
+mode: teaser
+content:
+  field_episode_number:
+    type: number_integer
+    weight: 3
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+  field_tvseason:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_tvshow:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_actor: true
+  field_clip: true
+  field_country: true
+  field_reviews: true
+  field_social_links: true

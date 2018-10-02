@@ -1,0 +1,33 @@
+uuid: 06871f1c-61d9-4f6a-bd5b-df0460b7d3b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_links
+    - node.type.tv_episode
+  module:
+    - link
+id: node.tv_episode.field_social_links
+field_name: field_social_links
+entity_type: node
+bundle: tv_episode
+label: 'Social Links'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://imbd.com'
+    title: IMDB
+    options: {  }
+  -
+    attributes: {  }
+    uri: 'https://facebook.com'
+    title: Facebook
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

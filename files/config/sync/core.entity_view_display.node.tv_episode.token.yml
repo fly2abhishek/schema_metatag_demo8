@@ -1,0 +1,119 @@
+uuid: ebedaf35-53de-4465-9ad0-691a35fc1794
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.tv_episode.body
+    - field.field.node.tv_episode.field_actor
+    - field.field.node.tv_episode.field_clip
+    - field.field.node.tv_episode.field_country
+    - field.field.node.tv_episode.field_episode_number
+    - field.field.node.tv_episode.field_image
+    - field.field.node.tv_episode.field_reviews
+    - field.field.node.tv_episode.field_social_links
+    - field.field.node.tv_episode.field_tvseason
+    - field.field.node.tv_episode.field_tvshow
+    - image.style.extra_large
+    - node.type.tv_episode
+  module:
+    - image
+    - link
+    - options
+    - text
+    - user
+id: node.tv_episode.token
+targetEntityType: node
+bundle: tv_episode
+mode: token
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_actor:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_clip:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_country:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_episode_number:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: extra_large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_reviews:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_social_links:
+    weight: 8
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_tvseason:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tvshow:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

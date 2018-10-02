@@ -1,0 +1,21 @@
+uuid: f1c4c0da-aa9c-4f62-b8dc-208bf75bb7fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_format
+    - node.type.book
+  module:
+    - options
+id: node.book.field_format
+field_name: field_format
+entity_type: node
+bundle: book
+label: Format
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

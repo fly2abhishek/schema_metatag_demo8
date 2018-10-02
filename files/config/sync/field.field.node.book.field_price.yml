@@ -1,0 +1,23 @@
+uuid: adb7b345-7ae7-4e59-8004-053fe000a8cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.book
+id: node.book.field_price
+field_name: field_price
+entity_type: node
+bundle: book
+label: Price
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,55 @@
+entity_type_groups:
+  node:
+    article:
+      schema_article: schema_article
+      schema_web_page: schema_web_page
+    book:
+      schema_book: schema_book
+      schema_web_page: schema_web_page
+    clip:
+      schema_movie: schema_movie
+      schema_web_page: schema_web_page
+    event:
+      schema_event: schema_event
+      schema_web_page: schema_web_page
+    job_posting:
+      schema_job_posting: schema_job_posting
+      schema_web_page: schema_web_page
+    organization:
+      schema_organization: schema_organization
+      schema_web_page: schema_web_page
+    page:
+      schema_web_page: schema_web_page
+    product:
+      schema_product: schema_product
+      schema_web_page: schema_web_page
+    recipe:
+      schema_recipe: schema_recipe
+      schema_web_page: schema_web_page
+    review:
+      schema_review: schema_review
+      schema_web_page: schema_web_page
+    service:
+      schema_service: schema_service
+      schema_web_page: schema_web_page
+    tv_episode:
+      schema_movie: schema_movie
+      schema_web_page: schema_web_page
+    tv_season:
+      schema_movie: schema_movie
+      schema_web_page: schema_web_page
+    tv_show:
+      schema_movie: schema_movie
+      schema_web_page: schema_web_page
+  taxonomy_term:
+    days:
+      schema_organization: schema_organization
+    recipe_category:
+      schema_recipe: schema_recipe
+      schema_web_page: schema_web_page
+    tags:
+      schema_web_page: schema_web_page
+  user:
+    user:
+      schema_person: schema_person
+      schema_web_page: schema_web_page

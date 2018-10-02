@@ -1,0 +1,19 @@
+uuid: e94764ff-1063-4fed-b427-cbabf139b73d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_reviews
+field_name: field_reviews
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

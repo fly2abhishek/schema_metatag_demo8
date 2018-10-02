@@ -1,0 +1,40 @@
+uuid: f88a88ce-4e28-4226-bda4-082a009d0c10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.recipe
+  module:
+    - image
+_core:
+  default_config_hash: BnkZAVyHS5gJ2rI7rGAa0vSV8R_iygHVv_k8BVTFHXk
+id: node.recipe.field_image
+field_name: field_image
+entity_type: node
+bundle: recipe
+label: Image
+description: 'This image will be used on both the recipe page and wherever the recipe is promoted.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 1200x800
+  min_resolution: 1200x800
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ad314523-b440-477a-9045-d36a3fd0f77c
+    alt: Image
+    title: ''
+    width: 1200
+    height: 800
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

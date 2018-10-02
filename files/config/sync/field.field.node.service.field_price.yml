@@ -1,0 +1,25 @@
+uuid: 7a30b6e5-dc7a-4cea-acb8-1f53f75ae703
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.service
+id: node.service.field_price
+field_name: field_price
+entity_type: node
+bundle: service
+label: Price
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: !!float 50
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

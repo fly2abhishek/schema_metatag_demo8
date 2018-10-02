@@ -1,0 +1,66 @@
+uuid: d6e3dfe3-1a29-45ec-b606-f09606e12ff4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.clip.body
+    - field.field.node.clip.field_category
+    - field.field.node.clip.field_country
+    - field.field.node.clip.field_duration
+    - field.field.node.clip.field_embed_url
+    - field.field.node.clip.field_end_date
+    - field.field.node.clip.field_image
+    - field.field.node.clip.field_price
+    - field.field.node.clip.field_reviews
+    - field.field.node.clip.field_start_date
+    - field.field.node.clip.field_times_watched
+    - field.field.node.clip.field_url
+    - image.style.medium
+    - node.type.clip
+  module:
+    - image
+    - link
+    - user
+id: node.clip.teaser
+targetEntityType: node
+bundle: clip
+mode: teaser
+content:
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+  field_url:
+    type: link
+    weight: 1
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_category: true
+  field_country: true
+  field_duration: true
+  field_embed_url: true
+  field_end_date: true
+  field_price: true
+  field_reviews: true
+  field_start_date: true
+  field_times_watched: true

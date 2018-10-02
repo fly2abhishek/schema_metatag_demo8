@@ -1,0 +1,39 @@
+uuid: 0f0bfd6f-cd85-4a68-b7a7-3a8aee057fc7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_job_status
+field_name: field_job_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: FULL-TIME
+      label: 'Full time'
+    -
+      value: PART-TIME
+      label: 'Part time'
+    -
+      value: CONTRACT
+      label: Contract
+    -
+      value: TEMPORARY
+      label: Temporary
+    -
+      value: SEASONAL
+      label: Seasonal
+    -
+      value: INTERNSHIP
+      label: Internship
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

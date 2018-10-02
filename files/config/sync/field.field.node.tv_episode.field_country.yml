@@ -1,0 +1,21 @@
+uuid: 32d0dabd-f803-4b5d-9f28-bcdb7fc33a38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.tv_episode
+  module:
+    - options
+id: node.tv_episode.field_country
+field_name: field_country
+entity_type: node
+bundle: tv_episode
+label: Country
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

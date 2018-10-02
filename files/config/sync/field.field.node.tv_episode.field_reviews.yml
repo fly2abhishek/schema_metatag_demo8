@@ -1,0 +1,28 @@
+uuid: 2eb10295-c4a1-48ac-8b75-fe9690623b36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reviews
+    - node.type.review
+    - node.type.tv_episode
+id: node.tv_episode.field_reviews
+field_name: field_reviews
+entity_type: node
+bundle: tv_episode
+label: Reviews
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      review: review
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

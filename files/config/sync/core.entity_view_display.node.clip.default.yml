@@ -1,0 +1,147 @@
+uuid: 7b92bb30-5372-44c8-bd4c-3a09cd148f9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.clip.body
+    - field.field.node.clip.field_category
+    - field.field.node.clip.field_country
+    - field.field.node.clip.field_duration
+    - field.field.node.clip.field_embed_url
+    - field.field.node.clip.field_end_date
+    - field.field.node.clip.field_image
+    - field.field.node.clip.field_price
+    - field.field.node.clip.field_reviews
+    - field.field.node.clip.field_start_date
+    - field.field.node.clip.field_times_watched
+    - field.field.node.clip.field_url
+    - image.style.extra_large
+    - node.type.clip
+  module:
+    - datetime
+    - duration_field
+    - image
+    - link
+    - options
+    - text
+    - user
+id: node.clip.default
+targetEntityType: node
+bundle: clip
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_category:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_country:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_duration:
+    weight: 1
+    label: above
+    settings:
+      text_length: full
+      separator: space
+    third_party_settings: {  }
+    type: duration_human_display
+    region: content
+  field_embed_url:
+    weight: 6
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_end_date:
+    weight: 8
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: extra_large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_price:
+    weight: 4
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_reviews:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_start_date:
+    weight: 7
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_times_watched:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_url:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

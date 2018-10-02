@@ -1,0 +1,47 @@
+uuid: f4877e9f-c9bc-4c74-b50f-5ddb104079c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.review.body
+    - field.field.node.review.field_item_reviewed
+    - field.field.node.review.field_rating
+    - node.type.review
+  module:
+    - text
+    - user
+id: node.review.default
+targetEntityType: node
+bundle: review
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_item_reviewed:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_rating:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,26 @@
+uuid: 39a51082-2e82-49cc-9626-eb1f5060f3c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.review
+  module:
+    - text
+id: node.review.body
+field_name: body
+entity_type: node
+bundle: review
+label: Body
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: "<p>Acsi commodo laoreet obruo probo valde. Aliquam blandit eros lobortis odio suscipit. Haero pagus patria rusticus vereor. Blandit inhibeo meus nobis odio quidem validus. Adipiscing aptent blandit haero inhibeo nibh quae qui sit. Capto in lucidus luctus sagaciter. Decet tation wisi. Amet exerci facilisis laoreet natu pala scisco. Erat gilvus modo nunc typicus vereor vulputate. Comis dignissim dolus euismod inhibeo nostrud oppeto quae.</p>\r\n\r\n<p>Cui sed voco. Ex nulla pagus. Adipiscing commodo cui enim exerci nunc pagus voco. Esca eu incassum os patria similis tincidunt velit. Autem nutus pala saluto. Distineo similis vel. Blandit capto et melior neo rusticus sed valde vindico. Capto eligo meus quia vicis vulpes. Cui dolus immitto nostrud. Aliquip antehabeo iustum ulciscor. Bene humo illum interdico typicus ymo. Brevitas jus ullamcorper. Abico defui duis hendrerit in nisl os vindico. Blandit feugiat natu pala proprius quis torqueo veniam.</p>\r\n\r\n<p>Dolus ibidem quidem tum vindico volutpat. Abigo damnum iustum qui voco. Abico bene decet patria valde wisi. Consectetuer gemino ille iriure refero vereor. Commoveo ea gravis humo jugis macto rusticus volutpat.</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

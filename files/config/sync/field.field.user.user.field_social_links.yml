@@ -1,0 +1,38 @@
+uuid: 38939c8e-1156-49c3-8917-c807aa628cc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_social_links
+  module:
+    - link
+    - user
+id: user.user.field_social_links
+field_name: field_social_links
+entity_type: user
+bundle: user
+label: 'Social links'
+description: 'Social links for this person'
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://facebook.com'
+    title: Facebook
+    options: {  }
+  -
+    attributes: {  }
+    uri: 'https::/twitter.com'
+    title: Twitter
+    options: {  }
+  -
+    attributes: {  }
+    uri: 'https://imdb.com'
+    title: IMDB
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

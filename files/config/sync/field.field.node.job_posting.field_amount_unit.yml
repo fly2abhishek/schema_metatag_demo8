@@ -1,0 +1,23 @@
+uuid: 677602d0-2e5e-4400-804c-e945b80560d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_amount_unit
+    - node.type.job_posting
+  module:
+    - options
+id: node.job_posting.field_amount_unit
+field_name: field_amount_unit
+entity_type: node
+bundle: job_posting
+label: 'Amount unit'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: YEAR
+default_value_callback: ''
+settings: {  }
+field_type: list_string

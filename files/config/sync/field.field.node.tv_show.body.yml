@@ -1,0 +1,22 @@
+uuid: ca089689-548d-46f6-a14f-42d329859767
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tv_show
+  module:
+    - text
+id: node.tv_show.body
+field_name: body
+entity_type: node
+bundle: tv_show
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

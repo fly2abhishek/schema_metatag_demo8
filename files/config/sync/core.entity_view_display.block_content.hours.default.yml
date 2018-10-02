@@ -1,0 +1,43 @@
+uuid: a20687e1-a499-449f-9e38-5f37317f35a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hours
+    - field.field.block_content.hours.field_closing
+    - field.field.block_content.hours.field_day
+    - field.field.block_content.hours.field_opening
+  module:
+    - datetime
+    - options
+id: block_content.hours.default
+targetEntityType: block_content
+bundle: hours
+mode: default
+content:
+  field_closing:
+    weight: 3
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: time
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_day:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_opening:
+    weight: 2
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: time
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden: {  }

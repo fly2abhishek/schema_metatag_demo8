@@ -1,0 +1,28 @@
+uuid: 0fabc80b-90a8-444f-ad68-8f02489e404e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_director
+    - node.type.tv_show
+id: node.tv_show.field_director
+field_name: field_director
+entity_type: node
+bundle: tv_show
+label: Director
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

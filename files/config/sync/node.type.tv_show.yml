@@ -1,0 +1,18 @@
+uuid: 0b5f2853-eab7-45f4-8b39-dee8fe9d5e3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'TV Show'
+type: tv_show
+description: 'A TV Show.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

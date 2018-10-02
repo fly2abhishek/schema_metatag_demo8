@@ -1,0 +1,23 @@
+uuid: 839e3933-20f1-4bf1-b9a7-08e518823d51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_minimum_amount
+    - node.type.job_posting
+id: node.job_posting.field_minimum_amount
+field_name: field_minimum_amount
+entity_type: node
+bundle: job_posting
+label: 'Minimum amount'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

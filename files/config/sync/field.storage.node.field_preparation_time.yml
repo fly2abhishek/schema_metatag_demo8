@@ -1,0 +1,19 @@
+uuid: a29de72e-c70d-4d9f-a21f-8fa3a8d35f88
+langcode: en
+status: true
+dependencies:
+  module:
+    - duration_field
+    - node
+id: node.field_preparation_time
+field_name: field_preparation_time
+entity_type: node
+type: duration
+settings: {  }
+module: duration_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

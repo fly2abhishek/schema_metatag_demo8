@@ -1,0 +1,14 @@
+uuid: 3734d927-e4e9-4995-8aa3-347b0ed9ff00
+langcode: en
+status: true
+dependencies: {  }
+id: node__review
+label: 'Content: Review'
+tags:
+  schema_review_author: 'a:4:{s:5:"@type";s:6:"Person";s:3:"@id";s:17:"[node:author:url]";s:4:"name";s:26:"[node:author:display-name]";s:3:"url";s:17:"[node:author:url]";}'
+  schema_review_type: Review
+  schema_review_item_reviewed: 'a:4:{s:5:"@type";s:7:"Product";s:3:"@id";s:37:"[node:field_item_reviewed:entity:url]";s:4:"name";s:39:"[node:field_item_reviewed:entity:title]";s:3:"url";s:37:"[node:field_item_reviewed:entity:url]";}'
+  schema_review_review_body: '[node:body]'
+  schema_review_review_rating: 'a:4:{s:5:"@type";s:6:"Rating";s:11:"ratingValue";s:19:"[node:field_rating]";s:11:"ratingCount";s:1:"1";s:10:"bestRating";s:1:"5";}'
+  schema_review_date_published: '[node:created:html_datetime]'
+  schema_review_name: '[node:title]'

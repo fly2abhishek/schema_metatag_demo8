@@ -1,0 +1,28 @@
+uuid: fd8d057b-ff8a-46e6-815a-e0237c9e171a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_clip
+    - node.type.clip
+    - node.type.tv_season
+id: node.tv_season.field_clip
+field_name: field_clip
+entity_type: node
+bundle: tv_season
+label: Clip
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      clip: clip
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

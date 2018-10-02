@@ -1,0 +1,28 @@
+uuid: 53a1c768-c105-44fe-bae4-73b7febd4ed0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reviews
+    - node.type.clip
+    - node.type.review
+id: node.clip.field_reviews
+field_name: field_reviews
+entity_type: node
+bundle: clip
+label: Reviews
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      review: review
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

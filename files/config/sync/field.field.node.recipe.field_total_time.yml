@@ -1,0 +1,28 @@
+uuid: 9941262e-313e-4e83-956a-cbe7a18dd504
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_total_time
+    - node.type.recipe
+  module:
+    - duration_field
+id: node.recipe.field_total_time
+field_name: field_total_time
+entity_type: node
+bundle: recipe
+label: 'Total time'
+description: 'Total preparation and cooking time.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  granularity:
+    hour: true
+    minute: true
+    year: false
+    month: false
+    day: false
+    second: false
+field_type: duration

@@ -1,0 +1,28 @@
+uuid: f06b3d11-c4d4-4938-8094-069e4609d1c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tvshow
+    - node.type.tv_season
+    - node.type.tv_show
+id: node.tv_season.field_tvshow
+field_name: field_tvshow
+entity_type: node
+bundle: tv_season
+label: TVShow
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tv_show: tv_show
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

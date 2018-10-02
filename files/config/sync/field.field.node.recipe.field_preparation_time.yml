@@ -1,0 +1,28 @@
+uuid: a1a5a362-45a9-46d4-a25b-25768853d81f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_preparation_time
+    - node.type.recipe
+  module:
+    - duration_field
+id: node.recipe.field_preparation_time
+field_name: field_preparation_time
+entity_type: node
+bundle: recipe
+label: 'Preparation time'
+description: 'Time to prepare the recipe.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  granularity:
+    hour: true
+    minute: true
+    year: false
+    month: false
+    day: false
+    second: false
+field_type: duration

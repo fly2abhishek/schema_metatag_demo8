@@ -1,0 +1,22 @@
+uuid: ace5f31e-dd60-4c6b-a42f-5c24536d96ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: scsca2SpZtTGHtOcICQbigG_CeUHAmjdJiSyKDl4yw4
+id: node.field_recipe_category
+field_name: field_recipe_category
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

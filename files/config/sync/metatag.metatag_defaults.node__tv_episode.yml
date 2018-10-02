@@ -1,0 +1,21 @@
+uuid: 544d2d8c-4daa-4196-8b65-5cf56e29dd40
+langcode: en
+status: true
+dependencies: {  }
+id: node__tv_episode
+label: 'Content: TV Episode'
+tags:
+  schema_movie_same_as: '[node:field_social_links]'
+  schema_movie_url: '[node:url]'
+  schema_movie_name: '[node:title]'
+  schema_movie_image: 'a:5:{s:5:"@type";s:11:"ImageObject";s:20:"representativeOfPage";s:4:"True";s:3:"url";s:28:"[node:field_image:large:url]";s:5:"width";s:30:"[node:field_image:large:width]";s:6:"height";s:31:"[node:field_image:large:height]";}'
+  schema_movie_date_created: '[node:creaed:html_datetime]'
+  schema_movie_part_of_season: 'a:5:{s:5:"@type";s:8:"TVSeason";s:3:"@id";s:32:"[node:field_tvseason:entity:url]";s:4:"name";s:21:"[node:field_tvseason]";s:6:"sameAs";s:32:"[node:field_tvseason:entity:url]";s:12:"seasonNumber";s:48:"[node:field_tvseason:entity:field_season_number]";}'
+  schema_movie_part_of_series: 'a:4:{s:5:"@type";s:8:"TVSeries";s:3:"@id";s:30:"[node:field_tvshow:entity:url]";s:4:"name";s:19:"[node:field_tvshow]";s:6:"sameAs";s:30:"[node:field_tvshow:entity:url]";}'
+  schema_movie_actor: 'a:4:{s:5:"pivot";s:1:"1";s:5:"@type";s:6:"Person";s:4:"name";s:18:"[node:field_actor]";s:6:"sameAs";s:92:"[node:field_actor:0:entity:field_social_links,[node:field_actor:1:entity:field_social_links]";}'
+  schema_movie_has_part: 'a:6:{s:5:"@type";s:6:"TVClip";s:3:"@id";s:34:"[node:field_clip:entity:field_url]";s:4:"name";s:30:"[node:field_clip:entity:title]";s:11:"description";s:32:"[node:field_clip:entity:summary]";s:12:"timeRequired";s:45:"[node:field_clip:entity:field_duration:value]";s:15:"potentialAction";a:3:{s:5:"@type";s:11:"WatchAction";s:6:"target";a:4:{s:5:"@type";s:10:"EntryPoint";s:11:"urlTemplate";s:40:"[node:field_clip:entity:field_url]?watch";s:14:"actionPlatform";s:73:"http://schema.org/DesktopWebPlatform, http://schema.org/MobileWebPlatform";s:10:"inLanguage";s:5:"en-US";}s:19:"expectsAcceptanceOf";a:8:{s:5:"pivot";s:1:"1";s:5:"@type";s:5:"Offer";s:5:"price";s:36:"[node:field_clip:entity:field_price]";s:13:"priceCurrency";s:3:"USD";s:18:"availabilityStarts";s:60:"[node:field_clip:entity:field_start_date:date:html_datetime]";s:16:"availabilityEnds";s:58:"[node:field_clip:entity:field_end_date:date:html_datetime]";s:8:"category";s:39:"[node:field_clip:entity:field_category]";s:14:"eligibleRegion";a:3:{s:5:"pivot";s:1:"1";s:5:"@type";s:7:"Country";s:4:"name";s:38:"[node:field_clip:entity:field_country]";}}}}'
+  schema_movie_season_number: '[node:field_season:entity:field_tvseason_number]'
+  schema_movie_description: '[node:summary]'
+  schema_movie_type: TVEpisode
+  schema_movie_episode_number: '[node:field_episode_number]'
+  schema_movie_id: '[node:url]'

@@ -1,0 +1,31 @@
+uuid: d7266d4c-ce3c-4f10-8a86-f184971d41a1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7d92b019-05ed-4185-85ac-26cefdbe00e8'
+  module:
+    - block_content
+    - system
+  theme:
+    - basis
+id: front
+theme: basis
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:7d92b019-05ed-4185-85ac-26cefdbe00e8'
+settings:
+  id: 'block_content:7d92b019-05ed-4185-85ac-26cefdbe00e8'
+  label: Front
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

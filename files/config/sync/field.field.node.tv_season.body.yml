@@ -1,0 +1,22 @@
+uuid: 99af1c35-a568-41ca-a155-e3b8c08b05d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tv_season
+  module:
+    - text
+id: node.tv_season.body
+field_name: body
+entity_type: node
+bundle: tv_season
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

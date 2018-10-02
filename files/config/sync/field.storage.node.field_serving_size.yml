@@ -1,0 +1,21 @@
+uuid: aee5324a-6e49-4e1a-80b8-75bed3cdf491
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_serving_size
+field_name: field_serving_size
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,51 @@
+uuid: 1afbc1b9-633b-497a-8527-52dfcf2fcc5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.job_posting.body
+    - field.field.node.job_posting.field_amount_unit
+    - field.field.node.job_posting.field_end_date
+    - field.field.node.job_posting.field_hiring_organization
+    - field.field.node.job_posting.field_job_status
+    - field.field.node.job_posting.field_maximum_amount
+    - field.field.node.job_posting.field_minimum_amount
+    - field.field.node.job_posting.field_start_date
+    - node.type.job_posting
+  module:
+    - options
+    - text
+    - user
+id: node.job_posting.teaser
+targetEntityType: node
+bundle: job_posting
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_job_status:
+    type: list_default
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_amount_unit: true
+  field_end_date: true
+  field_hiring_organization: true
+  field_maximum_amount: true
+  field_minimum_amount: true
+  field_start_date: true

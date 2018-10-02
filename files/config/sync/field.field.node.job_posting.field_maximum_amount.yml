@@ -1,0 +1,23 @@
+uuid: 39c3b37e-3db9-49c3-920f-cc6b99b1371a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maximum_amount
+    - node.type.job_posting
+id: node.job_posting.field_maximum_amount
+field_name: field_maximum_amount
+entity_type: node
+bundle: job_posting
+label: 'Maximum amount'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

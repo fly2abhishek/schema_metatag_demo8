@@ -1,0 +1,8 @@
+uuid: 1bd61a7e-9ced-4770-8513-af4a6e34d0f5
+langcode: en
+status: true
+dependencies: {  }
+id: hours
+label: Hours
+revision: 0
+description: 'Hours by day'

@@ -1,0 +1,23 @@
+uuid: 162c56ae-de46-43a2-9d10-2b5793602747
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating
+    - node.type.review
+id: node.review.field_rating
+field_name: field_rating
+entity_type: node
+bundle: review
+label: Rating
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 5
+  prefix: ''
+  suffix: ' points'
+field_type: integer

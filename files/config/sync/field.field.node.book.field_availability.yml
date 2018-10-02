@@ -1,0 +1,23 @@
+uuid: 1781600f-71fa-4d86-85d9-91782104eaac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_availability
+    - node.type.book
+  module:
+    - options
+id: node.book.field_availability
+field_name: field_availability
+entity_type: node
+bundle: book
+label: Availability
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'In stock'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

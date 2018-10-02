@@ -1,0 +1,20 @@
+uuid: 21fbfab7-79fd-41af-a5fa-8e5d6a852bf4
+langcode: en
+status: true
+dependencies:
+  module:
+    - schema_audit
+  theme:
+    - basis
+id: teststructureddataongoogle.
+theme: basis
+region: sidebar_second
+weight: 0
+provider: null
+plugin: test_block
+settings:
+  id: test_block
+  label: 'Test on Google'
+  provider: schema_audit
+  label_display: visible
+visibility: {  }

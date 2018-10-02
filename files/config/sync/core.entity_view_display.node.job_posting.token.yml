@@ -1,0 +1,82 @@
+uuid: f4f6b997-3a4d-4625-a0bc-e0615d55e1dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.job_posting.body
+    - field.field.node.job_posting.field_amount_unit
+    - field.field.node.job_posting.field_end_date
+    - field.field.node.job_posting.field_hiring_organization
+    - field.field.node.job_posting.field_job_status
+    - field.field.node.job_posting.field_maximum_amount
+    - field.field.node.job_posting.field_minimum_amount
+    - field.field.node.job_posting.field_start_date
+    - node.type.job_posting
+  module:
+    - options
+    - text
+    - user
+id: node.job_posting.token
+targetEntityType: node
+bundle: job_posting
+mode: token
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_amount_unit:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_hiring_organization:
+    type: entity_reference_entity_id
+    weight: 5
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_job_status:
+    type: list_default
+    weight: 6
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_maximum_amount:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 0
+      prefix_suffix: false
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_minimum_amount:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 0
+      prefix_suffix: false
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_end_date: true
+  field_start_date: true

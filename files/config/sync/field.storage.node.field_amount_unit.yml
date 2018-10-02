@@ -1,0 +1,36 @@
+uuid: d94aefbd-e0c8-46c4-95a4-ef6f82d501e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_amount_unit
+field_name: field_amount_unit
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: HOUR
+      label: 'per hour'
+    -
+      value: DAY
+      label: 'per day'
+    -
+      value: WEEK
+      label: 'per week'
+    -
+      value: MONTH
+      label: 'per month'
+    -
+      value: YEAR
+      label: 'per year'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

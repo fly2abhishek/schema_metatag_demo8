@@ -1,0 +1,30 @@
+uuid: 7b4ee20d-1475-4664-9deb-7c9ee594080d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_country
+field_name: field_country
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: us
+      label: 'United States'
+    -
+      value: ca
+      label: Canada
+    -
+      value: mx
+      label: Mexico
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

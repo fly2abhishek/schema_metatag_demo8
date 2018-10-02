@@ -1,0 +1,14 @@
+uuid: 9e8f3ddd-fe91-4bf5-9080-a45f62072a58
+langcode: en
+status: true
+dependencies: {  }
+id: node__book
+label: 'Content: Book'
+tags:
+  schema_book_author: 'a:5:{s:5:"@type";s:6:"Person";s:3:"@id";s:41:"[node:field_author:entity:field_web_site]";s:4:"name";s:39:"[node:field_author:entity:display-name]";s:3:"url";s:41:"[node:field_author:entity:field_web_site]";s:6:"sameAs";s:45:"[node:field_author:entity:field_social_links]";}'
+  schema_book_url: '[node:url]'
+  schema_book_type: Book
+  schema_book_name: '[node:title]'
+  schema_book_same_as: '[node:field_social_links]'
+  schema_book_work_example: 'a:10:{s:5:"@type";s:4:"Book";s:3:"@id";s:10:"[node:url]";s:4:"name";s:12:"[node:title]";s:3:"url";s:10:"[node:url]";s:6:"sameAs";s:25:"[node:field_social_links]";s:13:"datePublished";s:27:"[node:field_date_published]";s:4:"isbn";s:17:"[node:field_isbn]";s:11:"bookEdition";s:20:"[node:field_edition]";s:10:"bookFormat";s:19:"[node:field_format]";s:15:"potentialAction";a:3:{s:5:"@type";s:10:"ReadAction";s:6:"target";a:4:{s:5:"@type";s:10:"EntryPoint";s:11:"urlTemplate";s:22:"http://www.example.com";s:14:"actionPlatform";s:75:"https://schema.org/DesktopWebPlatform, https://schema.org/MobileWebPlatform";s:10:"inLanguage";s:2:"en";}s:19:"expectsAcceptanceOf";a:7:{s:5:"@type";s:5:"Offer";s:5:"price";s:18:"[node:field_price]";s:13:"priceCurrency";s:3:"USD";s:3:"url";s:18:"http://example.com";s:12:"availability";s:25:"[node:field_availability]";s:8:"category";s:8:"purchase";s:14:"eligibleRegion";a:2:{s:5:"@type";s:7:"Country";s:4:"name";s:20:"[node:field_country]";}}}}'
+  schema_book_id: '[node:url]'

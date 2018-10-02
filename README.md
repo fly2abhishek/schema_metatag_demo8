@@ -14,5 +14,5 @@ To create your own demo site:
 - Once the repository is linked, click the 'Preview' button on Tugboat to build a complete working demo web site (it will take a few minutes to build). Log into your demo with username 'admin' and password 'admin' (change the password after you log in).
 
 You might want to check out [the documentation on wiring up Tugboat to Drupal 8](https://docs.tugboat.qa/examples/drupal8/),
-and the [Makefile](https://github.com/karens/schema_metatag_demo8/blob/master/Makefile)
+and the [Tugboat configuration](https://github.com/karens/schema_metatag_demo8/blob/master/.tugboat)
 to see how this project is configured to work with Tugboat.

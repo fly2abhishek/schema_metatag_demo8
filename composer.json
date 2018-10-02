@@ -79,11 +79,6 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
-        },
-        "patches": {
-            "drupal/metatag": {
-                "Issue #2691313: metatag-poor-performance": "https://www.drupal.org/files/issues/2018-05-24/metatag-poor-performance-2691313.patch"
-            }
         }
     }
 }

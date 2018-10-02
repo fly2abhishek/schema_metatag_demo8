@@ -39,10 +39,10 @@ $settings['file_private_path'] = '../files/private';
 $settings['file_temporary_path'] = '/tmp';
 $config_directories['sync'] = '../files/config/sync';
 
-$config['stage_file_proxy_origin'] = 'https://assets.lullabot.com';
-$config['stage_file_proxy_origin_dir'] = '/';
-$config['stage_file_proxy_hotlink'] = FALSE;
-$config['stage_file_proxy_use_imagecache_root'] = TRUE;
+//$config['stage_file_proxy_origin'] = 'https://assets.lullabot.com';
+//$config['stage_file_proxy_origin_dir'] = '/';
+//$config['stage_file_proxy_hotlink'] = FALSE;
+//$config['stage_file_proxy_use_imagecache_root'] = TRUE;
 
 $config['system.logging']['error_level'] = 'verbose';
 error_reporting(E_ALL);

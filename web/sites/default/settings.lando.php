@@ -137,7 +137,9 @@ if (!empty($info) && !empty($_SERVER['HTTP_HOST'])) {
 }
 $settings['trusted_host_patterns'][] = '^' . str_replace('.', '\.', $host) . '$';
 
-$config['stage_file_proxy_origin'] = 'https://assets.lullabot.com';
-$config['stage_file_proxy_origin_dir'] = '/';
-$config['stage_file_proxy_hotlink'] = FALSE;
-$config['stage_file_proxy_use_imagecache_root'] = TRUE;
+//$config['stage_file_proxy_origin'] = 'https://assets.lullabot.com';
+//$config['stage_file_proxy_origin_dir'] = '/';
+//$config['stage_file_proxy_hotlink'] = FALSE;
+//$config['stage_file_proxy_use_imagecache_root'] = TRUE;
+
+//$options['uri'] = "http://mysite.lndo.site";

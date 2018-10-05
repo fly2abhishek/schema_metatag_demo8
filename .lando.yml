@@ -4,10 +4,47 @@ config:
   webroot: web
   php: '7.2'
   drush: composer
+  xdebug: true
+
 services:
   appserver:
-    xdebug: true
     config:
       conf: config/php.ini
+    via: apache
+    run_as_root:
+      - "apt-get update -y"
+      - "apt-get install build-essential chrpath libssl-dev libxft-dev libfreetype6-dev libfreetype6 libfontconfig1-dev libfontconfig1 -y"
+      - "wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2"
+      - "tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2 -C /usr/local/share/"
+      - "ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/"
+    overrides:
+      services:
+        environment:
+          #MINK_DRIVER_ARGS: '["chrome", null, "http://chromedriver:4444/wd/hub"]'
+          #MINK_DRIVER_ARGS_WEBDRIVER: '["chrome", null, "http://chromedriver:4444/wd/hub"]'
+          #MINK_DRIVER_CLASS: 'Drupal\FunctionalJavascriptTests\DrupalSelenium2Driver'
+          SIMPLETEST_DB: 'sqlite://localhost//tmp/db.sqlite'
+          SIMPLETEST_BASE_URL: 'http://appserver/'
+          BROWSERTEST_OUTPUT_DIRECTORY: '/app/files/simpletest'
+          PHP_IDE_CONFIG: "serverName=appserver"
+          #BEHAT_PARAMS: '{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "http://appserver/"}, "Drupal\\DrupalExtension" : {"drush" :   {  "root":  "/app/web" }}}}'
   database:
     type: mariadb
+
+events:
+  post-db-import:
+    - appserver: cd $LANDO_WEBROOT && drush updb -y
+    - appserver: cd $LANDO_WEBROOT && drush cr -y
+  post-start:
+    - appserver: cd $LANDO_MOUNT && composer install
+    - appserver: cp /app/web/core/phpunit.xml.dist /app/web/core/phpunit.xml
+    - appserver: mkdir -p -m 777 /app/files/simpletest
+
+tooling:
+  phpunit:
+    service: appserver
+    description: "Run PHP Unit tests: lando phpunit"
+    cmd: "/app/vendor/bin/phpunit --configuration /app/web/core/phpunit.xml --printer=\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter"
+  phantomjs:
+    service: appserver
+    description: "Run phantomjs commands"

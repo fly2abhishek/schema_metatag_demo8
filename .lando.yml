@@ -22,13 +22,19 @@ services:
     type: mariadb
 
 events:
-  post-db-import:
-    - appserver: cd $LANDO_WEBROOT && drush updb -y
-    - appserver: cd $LANDO_WEBROOT && drush cr -y
   post-start:
     - appserver: cd $LANDO_MOUNT && composer install
     - appserver: cp /app/web/core/phpunit.xml.dist /app/web/core/phpunit.xml
     - appserver: mkdir -p -m 777 /app/files/simpletest
+    - appserver: echo "Load database with 'lando db-import files/private/db/schema8.gz'"
+    - appserver: echo "Update core with 'composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies'"
+  post-db-import:
+    - appserver: cd $LANDO_WEBROOT && drush cr
+    - appserver: cd $LANDO_WEBROOT && drush updb -y
+    - appserver: cd $LANDO_WEBROOT && drush cim -y
+    - appserver: cd $LANDO_WEBROOT && drush cr
+    - appserver: cd $LANDO_WEBROOT && drush upwd admin password
+    - appserver: echo "Log in with credentials admin/password"
 
 tooling:
   phpunit:

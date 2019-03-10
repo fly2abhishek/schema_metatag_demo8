@@ -79,11 +79,6 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
-        },
-								"patches": {
-												"drupal/metatag": {
-																"Issue #2973458 MetatagEntityFieldItemList should use ComputedItemListTrait": "https://www.drupal.org/files/issues/2018-05-17/2973458-3.patch"
-												}
-								}        
+        }        
     }
 }

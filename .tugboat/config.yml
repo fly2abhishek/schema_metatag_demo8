@@ -21,10 +21,10 @@ services:
 
       # Commands that set up the basic preview infrastructure
       init: |
-        set -euxo pipefail
+        set -eux
         # Install prerequisite packages
         apt-get update
-        apt-get install -y mysql-client
+        apt-get install -y mysql-client libldap2-dev
 
         # Install drush-launcher
         wget -O /usr/local/bin/drush https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar
@@ -43,12 +43,12 @@ services:
       # skipping the init step, because the results of that step will
       # already be present.
       update: |
-        set -euxo pipefail
+        set -eux
         # Use the tugboat-specific Drupal settings
         cp "${TUGBOAT_ROOT}/.tugboat/settings.local.php" "${DOCROOT}/sites/default"
 
         # Install/update packages managed by composer, including drush
-        composer install --optimize-autoloader
+        composer install --optimize-autoloader --no-interaction
 
         # Create the private files directory.
         mkdir -p $DOCROOT/../files/private
@@ -68,7 +68,7 @@ services:
       # and update steps, because the results of those are inherited
       # from the base preview.
       build: |
-        set -euxo pipefail
+        set -eux
         # Install/update packages managed by composer, including drush
         composer install --no-ansi --optimize-autoloader
         drush -r "${DOCROOT}" cim -y

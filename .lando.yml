@@ -18,6 +18,13 @@ services:
           SIMPLETEST_BASE_URL: 'http://appserver/'
           BROWSERTEST_OUTPUT_DIRECTORY: '/app/files/simpletest'
           PHP_IDE_CONFIG: "serverName=appserver"
+          DB_SOURCE: 'https://www.dropbox.com/s/dl/lhz8tst3cjgy63u/schema8.gz'
+          DB_LOCAL: 'files/private/db.sql.gz'
+    run: |
+      if test ! -f $LANDO_MOUNT/$DB_LOCAL; then
+          echo Downloading backup: $DB_SOURCE;
+          wget -O $LANDO_MOUNT/$DB_LOCAL $DB_SOURCE
+      fi
   database:
     type: mariadb
 
@@ -26,8 +33,7 @@ events:
     - appserver: cd $LANDO_MOUNT && composer install
     - appserver: cp /app/web/core/phpunit.xml.dist /app/web/core/phpunit.xml
     - appserver: mkdir -p -m 777 /app/files/simpletest
-    - appserver: echo "Load database with 'lando db-import files/private/db/schema8.gz'"
-    - appserver: echo "Update core with 'composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies'"
+    - appserver: echo "To load database, run \e[1;32m lando db-import $DB_LOCAL \e[0m"
   post-db-import:
     - appserver: cd $LANDO_WEBROOT && drush cr
     - appserver: cd $LANDO_WEBROOT && drush updb -y
@@ -41,3 +47,7 @@ tooling:
     service: appserver
     description: "Run PHP Unit tests: lando phpunit --group schema_metatag"
     cmd: "/app/vendor/bin/phpunit --configuration /app/web/core --printer=\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter"
+  updatecore:
+    service: appserver
+    description: "Update core with 'composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies'"
+    cmd: echo "Update core with 'composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies'"

@@ -38,3 +38,7 @@ docker-compose.override.yml
 /vendor/**/.git
 /docroot/**/.git
 /web/**/.git
+
+# Ignore .env files as they are personal
+/.env
+

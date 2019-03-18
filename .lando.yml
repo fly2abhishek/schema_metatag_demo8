@@ -4,49 +4,35 @@ config:
   webroot: web
   php: '7.2'
   drush: composer
+  index: false
+  edge: false
+  cache: false
   xdebug: true
-
+env_file:
+  - .env
 services:
   appserver:
     config:
       conf: config/php.ini
     via: apache
-    overrides:
-      services:
-        environment:
-          SIMPLETEST_DB: 'sqlite://localhost//tmp/db.sqlite'
-          SIMPLETEST_BASE_URL: 'http://appserver/'
-          BROWSERTEST_OUTPUT_DIRECTORY: '/app/files/simpletest'
-          PHP_IDE_CONFIG: "serverName=appserver"
-          DB_SOURCE: 'https://www.dropbox.com/s/dl/lhz8tst3cjgy63u/schema8.gz'
-          DB_LOCAL: 'files/private/db.sql.gz'
-    run: |
-      if test ! -f $LANDO_MOUNT/$DB_LOCAL; then
-          echo Downloading backup: $DB_SOURCE;
-          wget -O $LANDO_MOUNT/$DB_LOCAL $DB_SOURCE
-      fi
+    run:
+      - bash /app/scripts/lando/run.sh
   database:
     type: mariadb
-
 events:
   post-start:
-    - appserver: cd $LANDO_MOUNT && composer install
-    - appserver: cp /app/web/core/phpunit.xml.dist /app/web/core/phpunit.xml
-    - appserver: mkdir -p -m 777 /app/files/simpletest
-    - appserver: echo "To load database, run \e[1;32m lando db-import $DB_LOCAL \e[0m"
+    - bash /app/scripts/lando/post-start.sh
   post-db-import:
-    - appserver: cd $LANDO_WEBROOT && drush cr
-    - appserver: cd $LANDO_WEBROOT && drush updb -y
-    - appserver: cd $LANDO_WEBROOT && drush cim -y
-    - appserver: cd $LANDO_WEBROOT && drush cr
-    - appserver: cd $LANDO_WEBROOT && drush upwd admin password
-    - appserver: echo "Log in with credentials admin/password"
-
+    - bash /app/scripts/lando/post-db.sh
 tooling:
   phpunit:
     service: appserver
     description: "Run PHP Unit tests: lando phpunit --group schema_metatag"
     cmd: "/app/vendor/bin/phpunit --configuration /app/web/core --printer=\\Drupal\\Tests\\Listeners\\HtmlOutputPrinter"
+  phpunit-prepare:
+    service: appserver
+    description: "One time update so tests will run in php 7.2"
+    cmd: composer run-script drupal-phpunit-upgrade
   updatecore:
     service: appserver
     description: "Update core with 'composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies'"

@@ -1,20 +1,14 @@
 name: schema8
 recipe: drupal8
 config:
-  webroot: web
   php: '7.2'
-  drush: composer
-  index: false
-  edge: false
-  cache: false
   xdebug: true
 env_file:
   - .env
 services:
   appserver:
-    config:
-      conf: config/php.ini
-    via: apache
+    webroot: web
+    type: php    
     run:
       - bash /app/scripts/lando/run.sh
   database:
@@ -23,7 +17,9 @@ events:
   post-start:
     - bash /app/scripts/lando/post-start.sh
   post-db-import:
-    - bash /app/scripts/lando/post-db.sh
+    - appserver: /app/vendor/bin/drush updb --root=/app/web -y
+    - appserver: /app/vendor/bin/drush cim --root=/app/web -y
+    - appserver: /app/vendor/bin/drush cr --root=/app/web
 tooling:
   phpunit:
     service: appserver

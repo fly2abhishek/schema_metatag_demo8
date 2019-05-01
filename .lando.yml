@@ -16,12 +16,12 @@ services:
 events:
   post-start:
     - bash /app/scripts/lando/post-start.sh
+    - appserver: echo "Run composer install when first installed or modules are updated"
   post-db-import:
     - appserver: /app/vendor/bin/drush updb --root=/app/web -y
     - appserver: /app/vendor/bin/drush cim --root=/app/web -y
     - appserver: /app/vendor/bin/drush cr --root=/app/web
     - appserver: /app/vendor/bin/drush upwd admin password --root=/app/web
-    - appserver: echo "Run composer install when first installed or modules are updated"
     - appserver: echo "Log in with credentials admin/password"
 tooling:
   phpunit:
@@ -34,5 +34,5 @@ tooling:
     cmd: composer run-script drupal-phpunit-upgrade
   updatecore:
     service: appserver
-    description: "Update core with 'composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies'"
-    cmd: echo "Update core with 'composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies'"
+    description: "Updates core with 'composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies'"
+    cmd: composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies

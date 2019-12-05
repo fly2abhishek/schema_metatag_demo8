@@ -36,3 +36,11 @@ tooling:
     service: appserver
     description: "Updates core with 'composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies'"
     cmd: composer update drupal/core webflo/drupal-core-require-dev symfony/* --with-dependencies
+  phpstan:
+    service: appserver
+    cmd: /app/vendor/bin/phpstan
+  drupal9-deprecation:
+    service: appserver
+    description: Test code for Drupal 9 deprecation.
+    cmd:
+      - appserver: /app/vendor/bin/phpstan analyse web/modules/contrib/schema_metatag
